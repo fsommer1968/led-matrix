@@ -192,6 +192,27 @@ class AnzeigeOhneSteckdose(unittest.TestCase):
         self.assertEqual(mw.anzeige_soll(abends, steckdose=""), "an")
 
 
+class StromlosNachZeitplan(unittest.TestCase):
+    def test_nicht_hochladen_wenn_steckdose_aus(self):
+        import datetime as dt
+        mittags = dt.datetime(2026, 11, 24, 12, 0, tzinfo=zp.ZONE)
+        abends = dt.datetime(2026, 11, 24, 19, 0, tzinfo=zp.ZONE)
+        self.assertTrue(mw.stromlos_nach_zeitplan(mittags, steckdose="http://x"))
+        self.assertFalse(mw.stromlos_nach_zeitplan(abends, steckdose="http://x"))
+        self.assertFalse(mw.stromlos_nach_zeitplan(mittags, steckdose=""))   # ohne Steckdose: BLE
+
+
+class Journal(unittest.TestCase):
+    def test_stufe_als_vorsatz(self):
+        import logging
+        f = zp._JournalFormat("%(message)s")
+        rec = lambda lv: logging.LogRecord("x", lv, "", 0, "Text", None, None)  # noqa: E731
+        self.assertEqual(f.format(rec(logging.INFO)), "Text")            # Stufe aus SyslogLevel=
+        self.assertEqual(f.format(rec(logging.WARNING)), "<4>Text")
+        self.assertEqual(f.format(rec(logging.ERROR)), "<3>Text")
+        self.assertEqual(f.format(rec(logging.DEBUG)), "<7>Text")
+
+
 class Kurznamen(unittest.TestCase):
     def test_gif_pfad(self):
         self.assertEqual(mw.gif_pfad("kamin"), os.path.join(mw.GIF_ORDNER, "kamin_64x16.gif"))

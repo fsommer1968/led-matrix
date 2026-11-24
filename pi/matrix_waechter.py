@@ -168,6 +168,13 @@ def gif_jetzt(jetzt=None, gifs=None, start=None, wechsel=None, phasen=None):
     return gif_pfad(liste[n % len(liste)])
 
 
+def stromlos_nach_zeitplan(jetzt, steckdose=None):
+    """True, wenn die Steckdose die Matrix jetzt ausschaltet (oder schon aus hat): dann nicht
+    suchen und nicht hochladen. Sonst begann um 08:30 ein Upload in derselben Sekunde, in der
+    der Zeitplan die Steckdose ausschaltete, und scheiterte jeden Tag (24.11.2026)."""
+    return bool(STECKDOSE if steckdose is None else steckdose) and not matrix_zeitplan.soll_an(jetzt)
+
+
 def anzeige_soll(jetzt=None, steckdose=None):
     """'an'/'aus' nach Zeitplan, wenn KEINE Steckdose da ist; sonst None (Steckdose schaltet)."""
     import datetime
@@ -304,9 +311,7 @@ async def einmal_hochladen(name, bilder, hell=HELL, komprimiert=None):
 
 
 async def main():
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", stream=sys.stdout)
-    for n in ("matrix-spieler", "matrix-upload"):
-        logging.getLogger(n).setLevel(logging.INFO)
+    matrix_zeitplan.log_einrichten()
     namen = [g for _a, liste in PHASEN for g in liste]
     alle = list(dict.fromkeys(gif_pfad(g) for g in namen)) or [GIF]
     cache = {}                                  # Pfad → (mtime, (bytes, bilder))
@@ -339,10 +344,11 @@ async def main():
             await asyncio.sleep(600)
             continue
         name = None
-        try:
-            name = await matrix_suchen()
-        except Exception as e:                  # Bluetooth kurz weg o. ä.
-            log.warning("Suche fehlgeschlagen: %s", e)
+        if not stromlos_nach_zeitplan(jetzt):
+            try:
+                name = await matrix_suchen()
+            except Exception as e:              # Bluetooth kurz weg o. ä.
+                log.warning("Suche fehlgeschlagen: %s", e)
         jetzt = datetime.datetime.now(zone)
         beginn = naechster_phasenbeginn(jetzt)
         if beginn and (beginn - jetzt).total_seconds() <= 20:   # Phasenbeginn sekundengenau
@@ -372,7 +378,6 @@ async def main():
                 log.info("%s: lade %s hoch (%s)", name, os.path.basename(pfad), soll)
                 if await einmal_hochladen(name, bilder, hell, vorrat):
                     stand_schreiben(soll)
-                    log.info("Fertig, Stand gemerkt")
                     fehlversuche, gemeldet = 0, soll
                     if anzeige_soll():
                         stand_schreiben(anzeige_soll(), ANZEIGE)

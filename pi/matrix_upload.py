@@ -187,10 +187,10 @@ async def hochladen(m, bilder, tempo=75, hell=100, komprimiert=None):
     t0 = time.monotonic()
     if komprimiert is None or len(komprimiert) != len(bilder):
         komprimiert = [a2pl.compress(b) for b in bilder]
-        log.info("%d Bilder, komprimiert %d Bytes (%.1f s)", len(bilder), sum(map(len, komprimiert)),
-                 time.monotonic() - t0)
+        log.debug("%d Bilder, komprimiert %d Bytes (%.1f s)", len(bilder), sum(map(len, komprimiert)),
+                  time.monotonic() - t0)
     else:
-        log.info("%d Bilder aus dem Vorrat, %d Bytes", len(bilder), sum(map(len, komprimiert)))
+        log.debug("%d Bilder aus dem Vorrat, %d Bytes", len(bilder), sum(map(len, komprimiert)))
     if sum(map(len, komprimiert)) > MAX_BYTES:
         raise ValueError(f"{sum(map(len, komprimiert))} Bytes – die Matrix verkraftet höchstens "
                          f"etwa {MAX_BYTES} (sonst ist die Animation kaputt)")
@@ -201,7 +201,8 @@ async def hochladen(m, bilder, tempo=75, hell=100, komprimiert=None):
         erwartet = b"\x15" + b[:2] + (b"\x00" + b[3:4] if b[1] == 0x03 else b"")
         await quittung(m, erwartet)
     await m.senden(bytes([0xE2, 0x09, 0x01, tempo, hell, 0x00]))
-    log.info("Hochgeladen in %.1f s, Tempo %d, Helligkeit %d", time.monotonic() - t0, tempo, hell)
+    log.info("Hochgeladen in %.1f s: %d Bilder, %d Bytes, Tempo %d, Helligkeit %d",
+             time.monotonic() - t0, len(bilder), sum(map(len, komprimiert)), tempo, hell)
 
 
 async def _main():

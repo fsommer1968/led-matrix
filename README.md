@@ -385,7 +385,7 @@ Gemessen an einer Matrix (Firmware unbekannt):
 | Upload bricht ab | Signal prüfen (besser als −90 dBm), WLAN auf 5 GHz, Pi näher bzw. Antennenkante zur Matrix |
 | Wächter lädt nicht neu | `sudo rm /var/lib/matrix-waechter/stand && sudo systemctl restart matrix-waechter` |
 | Zeiten stimmen nicht | Ort und Zeitzone prüfen, `matrix_zeitplan.py plan 7` |
-| Log | `journalctl -u matrix-waechter -f`, `journalctl -u matrix-zeitplan` |
+| Log | `journalctl -u matrix-waechter -f`, `journalctl -u matrix-zeitplan` (nur wenn geschaltet wurde), nur Warnungen `journalctl -p warning` |
 
 ## Programme im Überblick
 

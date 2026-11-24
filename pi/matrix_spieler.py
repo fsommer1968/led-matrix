@@ -149,7 +149,7 @@ class Matrix:
             raise RuntimeError(f"{self.name} nicht gefunden")
         self.client = BleakClient(dev, timeout=timeout)
         await asyncio.wait_for(self.client.connect(), timeout + 15)
-        log.info("Verbindung steht, Handschlag …")
+        log.debug("Verbindung steht, Handschlag …")
         self.rx = asyncio.Queue(maxsize=100)
         await asyncio.wait_for(self.client.start_notify(MELDUNG, self._meldung), ZEITLIMIT)
         jetzt = datetime.datetime.now()

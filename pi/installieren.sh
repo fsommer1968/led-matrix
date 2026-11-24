@@ -73,6 +73,18 @@ systemd-run --unit=matrix-vorrat --nice=10 "$ZIEL/.venv/bin/python" "$ZIEL/matri
 systemctl start matrix-adventskalender.service && systemctl enable --now matrix-adventskalender.timer
 ls -l "$ZIEL/gifs"
 
+abschnitt "Journal ruhiger (nur Einträge mit Information)"
+# WLAN: wpa_supplicant meldet alle ~16 min "Group rekeying completed" und "RRM: Ignoring …"
+# (Stufe notice). Verbindungsabbrüche protokolliert NetworkManager weiterhin selbst.
+install -d /etc/systemd/system/wpa_supplicant.service.d
+printf '[Service]\nLogLevelMax=warning\n' > /etc/systemd/system/wpa_supplicant.service.d/matrix-leiser.conf
+# SSH: ohne Linger startet und stoppt bei jeder Anmeldung root's Benutzer-Dienst (~45 Zeilen)
+loginctl enable-linger root
+# SSH: "pam_env: deprecated reading of user environment enabled" bei jeder Anmeldung
+sed -i -E 's/^(session\s+required\s+pam_env\.so) user_readenv=1 /\1 /' /etc/pam.d/sshd
+# wirkt nach daemon-reload; wpa_supplicant nicht neu starten (SSH läuft über das WLAN)
+systemctl daemon-reload
+
 abschnitt "Nach der Matrix suchen (ohne Verbindung)"
 timeout 30 "$ZIEL/.venv/bin/python" -c "
 import asyncio
@@ -90,5 +102,5 @@ echo "Nächste Schritte (iPhone-App geschlossen, Matrix an):"
 echo "  1. Test-Upload:    cd $ZIEL && .venv/bin/python matrix_upload.py gifs/weihnachtsmann_rentier_64x16.gif"
 echo "  2. Wächter an:     sudo systemctl enable --now matrix-waechter"
 echo "  3. Zeitplan an:    sudo systemctl enable --now matrix-zeitplan.timer   (nur mit Steckdose; Plan: $ZIEL/matrix_zeitplan.py plan)"
-echo "  Log:               journalctl -u matrix-waechter -f"
+echo "  Log:               journalctl -u matrix-waechter -f   (nur Warnungen: journalctl -p warning)"
 echo "Bericht: $ZIEL/einrichtung.log"

@@ -57,6 +57,24 @@ TAGE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 log = logging.getLogger("matrix-zeitplan")
 
 
+class _JournalFormat(logging.Formatter):
+    """Unter systemd: Stufe als <N>-Vorsatz fürs Journal, ohne eigene Uhrzeit (die setzt journald)."""
+    STUFE = {logging.DEBUG: 7, logging.WARNING: 4, logging.ERROR: 3, logging.CRITICAL: 2}
+
+    def format(self, record):
+        n = self.STUFE.get(record.levelno)
+        text = super().format(record)
+        return text if n is None else f"<{n}>{text}"     # INFO: Stufe aus SyslogLevel= der Unit
+
+
+def log_einrichten(level=logging.INFO):
+    """Ausgabe nach stdout: im Journal mit Stufe, von Hand gestartet mit Uhrzeit."""
+    h = logging.StreamHandler(sys.stdout)
+    h.setFormatter(_JournalFormat("%(message)s") if os.environ.get("JOURNAL_STREAM")
+                   else logging.Formatter("%(asctime)s %(message)s"))
+    logging.basicConfig(level=level, handlers=[h])
+
+
 # ── reine Funktionen (testbar) ─────────────────────────────────────
 def sonnenuntergang(datum, breite=BREITE, laenge=LAENGE, zone=ZONE):
     """Sonnenuntergang (Ortszeit, mit Zeitzone) am `datum` nach der NOAA-Näherung."""
@@ -189,7 +207,7 @@ def plan(tage=7):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
+    log_einrichten()
     if len(sys.argv) > 1 and sys.argv[1] == "plan":
         plan(int(sys.argv[2]) if len(sys.argv) > 2 else 7)
         sys.exit(0)
