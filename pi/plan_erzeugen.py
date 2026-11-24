@@ -49,6 +49,14 @@ SILVESTER = ["feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel"
 HEIMAT = ["kuckucksuhr", "schwibbogen", "nussknacker", "schwarzwald", "katze_baum", "pyramide", "raeuchermann"]
 ALLGEMEIN += HEIMAT
 WEIHNACHTEN += HEIMAT
+# Weitere: Silvester ab 27.12., Winter allgemein, Weihnachten auch am 25./26.
+SILVESTER_NEU = ["gluecksschwein", "rakete", "kirchturm", "wunderkerzen"]
+SILVESTER += SILVESTER_NEU
+WINTER_NEU = ["kirschtorte", "hermelin", "muehle"]
+ALLGEMEIN += WINTER_NEU
+FEST_NEU = ["weihnachtsmann_kamin"]
+ALLGEMEIN += FEST_NEU
+WEIHNACHTEN += FEST_NEU
 
 
 def neues_jahr(heute=None):

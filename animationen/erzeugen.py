@@ -36,6 +36,14 @@ ANIMATIONEN = ["bunt", "kamin", "schlitten", "schneemann", "polarlicht", "advent
                "katze_baum",
                "pyramide",
                "raeuchermann",
+               "gluecksschwein",
+               "weihnachtsmann_kamin",
+               "kirschtorte",
+               "rakete",
+               "kirchturm",
+               "wunderkerzen",
+               "hermelin",
+               "muehle",
                # HEIMAT
                # Silvester (ab 27.12.) und der Gruß um 23:59
                "feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel", "neujahr_2027"]
