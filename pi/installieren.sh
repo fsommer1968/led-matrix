@@ -84,6 +84,13 @@ loginctl enable-linger root
 sed -i -E 's/^(session\s+required\s+pam_env\.so) user_readenv=1 /\1 /' /etc/pam.d/sshd
 # wirkt nach daemon-reload; wpa_supplicant nicht neu starten (SSH läuft über das WLAN)
 systemctl daemon-reload
+# Journal dauerhaft auf der SD-Karte (höchstens 20 MB), damit nach Stromtrennen oder Hänger
+# die Ursache nachlesbar ist. Zurück: Datei löschen, rm -rf /var/log/journal, journald neu starten.
+install -d /etc/systemd/journald.conf.d /var/log/journal
+printf '[Journal]\nStorage=persistent\nSystemMaxUse=20M\nSyncIntervalSec=5m\n' \
+    > /etc/systemd/journald.conf.d/matrix-dauerhaft.conf
+systemd-tmpfiles --create --prefix /var/log/journal
+systemctl restart systemd-journald
 
 abschnitt "Nach der Matrix suchen (ohne Verbindung)"
 timeout 30 "$ZIEL/.venv/bin/python" -c "
