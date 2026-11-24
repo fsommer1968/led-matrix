@@ -37,7 +37,10 @@ ALLGEMEIN = ["kamin", "schlittenflug", "polarlicht", "lebkuchen", "zug", "glocke
              "weihnachtsmarkt", "rentier", "schneeballschlacht", "auspacken", "lichterhaus",
              "eislaufen", "plaetzchen", "futterhaus", "werkstatt", "winterwald", "schneeflocken",
              "baum_schmuecken", "rodeln", "wunschzettel", "bratapfel", "geschenkeberg", "stadt_schnee",
-             "weihnachtsmann_rentier"]
+             "weihnachtsmann_rentier",
+             # Winter
+             "skifahrer", "schneepflug", "schneekugel", "hundeschlitten", "eisbaer", "iglu", "eule",
+             "schneemann_bauen"]
 ADVENT_EXTRA = ["hirten", "krippe", "stille_nacht"]          # erst im Advent
 WEIHNACHTEN = ["weihnacht_bunt", "krippe", "hohoho", "stille_nacht", "schneemann", "auspacken",
                "hirten", "baum_schmuecken", "geschenkeberg", "rentier"]

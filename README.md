@@ -5,7 +5,7 @@
 Eine Alternative zur **Surplife-App**: Ein Raspberry Pi lädt eigene Animationen per Bluetooth
 in eine Surplife-LED-Matrix (64×16 Pixel, Gerätename `IOTBT…`), wechselt sie nach Plan, schaltet
 die Anzeige nach Zeitplan ein und aus und passt die Helligkeit dem Tageslicht an. Dazu gehören
-rund 40 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
+rund 50 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
 
 **Verwandte Projekte**, ohne die das hier nicht entstanden wäre:
 
@@ -232,6 +232,14 @@ Alle 64×16, je 255 Bilder, komprimiert höchstens 76 KB; 8-fach vergrößerte V
 | `winterwald` | Winter | Reh und Fuchs im Winterwald | 72.9 |
 | `bratapfel` | Winter | Bratapfel im Ofen, Kakao mit Sahne und Marshmallows | 73.2 |
 | `stadt_schnee` | Winter | Stadt wird weiß, Fenster gehen an, Kirche, Baum | 73.5 |
+| `skifahrer` | Winter | Skifahrer im Slalom, Sessellift fährt hinauf | 70.1 |
+| `schneepflug` | Winter | Schneepflug räumt nachts die Straße | 73.4 |
+| `schneekugel` | Winter | Schneekugel wird geschüttelt | 72.7 |
+| `hundeschlitten` | Winter | Huskygespann zieht den Schlitten durch den Schnee | 73.6 |
+| `eisbaer` | Winter | Eisbärin mit Jungem auf der Eisscholle | 65.4 |
+| `iglu` | Winter | Iglu wird gebaut, drinnen geht das Licht an | 54.9 |
+| `eule` | Winter | Schneeeule gleitet durch die Winternacht | 73.7 |
+| `schneemann_bauen` | Winter | Kinder bauen einen Schneemann | 73.1 |
 | `weihnachtsmann_rentier` | Winter | Weihnachtsmann und Rentier (50 Bilder) | 9.0 |
 | `auspacken` | Geschenke | Geschenk auspacken: Teddy, Spielzeugzug, Stern | 47.7 |
 | `werkstatt` | Geschenke | Wichtel am Fließband, Stempel | 71.5 |
