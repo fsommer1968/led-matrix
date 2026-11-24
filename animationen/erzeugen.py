@@ -28,6 +28,15 @@ ANIMATIONEN = ["bunt", "kamin", "schlitten", "schneemann", "polarlicht", "advent
                # Winter ohne Weihnachtsbezug
                "skifahrer", "schneepflug", "schneekugel", "hundeschlitten", "eisbaer", "iglu", "eule",
                "schneemann_bauen",
+               # Erzgebirge, Schwarzwald und Katze
+               "kuckucksuhr",
+               "schwibbogen",
+               "nussknacker",
+               "schwarzwald",
+               "katze_baum",
+               "pyramide",
+               "raeuchermann",
+               # HEIMAT
                # Silvester (ab 27.12.) und der Gruß um 23:59
                "feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel", "neujahr_2027"]
 LED = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

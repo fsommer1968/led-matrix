@@ -4,7 +4,7 @@
 
 An alternative to the **Surplife app**: a Raspberry Pi uploads your own animations via Bluetooth
 to a Surplife LED matrix (64×16 pixels, device name `IOTBT…`), rotates them on a schedule,
-switches the display on and off by time of day and adapts the brightness to daylight. Around 50
+switches the display on and off by time of day and adapts the brightness to daylight. Around 60
 hand-drawn (procedurally generated) Christmas, winter and New Year animations are included.
 
 **Related projects** this builds on:
@@ -239,6 +239,13 @@ All 64×16, 255 frames each, at most 76 KB compressed; 8× enlarged previews in 
 | `iglu` | Winter | igloo is built, the light goes on inside | 54.9 |
 | `eule` | Winter | snowy owl glides through the winter night | 73.7 |
 | `schneemann_bauen` | Winter | children build a snowman | 73.1 |
+| `kuckucksuhr` | Winter | Black Forest cuckoo clock | 70.8 |
+| `schwibbogen` | Winter | candle arch in the window, the lights come on | 72.5 |
+| `nussknacker` | Winter | nutcracker cracks nuts | 71.7 |
+| `schwarzwald` | Winter | winter in the Black Forest (with lettering) | 73.5 |
+| `katze_baum` | Winter | cat plays with the Christmas tree | 71.1 |
+| `pyramide` | Winter | Christmas pyramid turning in candlelight | 71.5 |
+| `raeuchermann` | Winter | incense smoker puffs smoke rings | 73.8 |
 | `weihnachtsmann_rentier` | Winter | Santa and reindeer (50 frames) | 9.0 |
 | `auspacken` | Presents | unwrapping a present: teddy, toy train, star | 47.7 |
 | `werkstatt` | Presents | elves at the conveyor belt | 71.5 |

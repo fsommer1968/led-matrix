@@ -45,6 +45,10 @@ ADVENT_EXTRA = ["hirten", "krippe", "stille_nacht"]          # erst im Advent
 WEIHNACHTEN = ["weihnacht_bunt", "krippe", "hohoho", "stille_nacht", "schneemann", "auspacken",
                "hirten", "baum_schmuecken", "geschenkeberg", "rentier"]
 SILVESTER = ["feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel"]
+# Erzgebirge, Schwarzwald und Katze: im allgemeinen Wechsel und an Weihnachten
+HEIMAT = ["kuckucksuhr", "schwibbogen", "nussknacker", "schwarzwald", "katze_baum", "pyramide", "raeuchermann"]
+ALLGEMEIN += HEIMAT
+WEIHNACHTEN += HEIMAT
 
 
 def neues_jahr(heute=None):

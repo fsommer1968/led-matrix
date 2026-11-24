@@ -5,7 +5,7 @@
 Eine Alternative zur **Surplife-App**: Ein Raspberry Pi lädt eigene Animationen per Bluetooth
 in eine Surplife-LED-Matrix (64×16 Pixel, Gerätename `IOTBT…`), wechselt sie nach Plan, schaltet
 die Anzeige nach Zeitplan ein und aus und passt die Helligkeit dem Tageslicht an. Dazu gehören
-rund 50 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
+rund 60 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
 
 **Verwandte Projekte**, ohne die das hier nicht entstanden wäre:
 
@@ -240,6 +240,13 @@ Alle 64×16, je 255 Bilder, komprimiert höchstens 76 KB; 8-fach vergrößerte V
 | `iglu` | Winter | Iglu wird gebaut, drinnen geht das Licht an | 54.9 |
 | `eule` | Winter | Schneeeule gleitet durch die Winternacht | 73.7 |
 | `schneemann_bauen` | Winter | Kinder bauen einen Schneemann | 73.1 |
+| `kuckucksuhr` | Winter | Schwarzwälder Kuckucksuhr | 70.8 |
+| `schwibbogen` | Winter | Schwibbogen im Fenster, die Lichter gehen an | 72.5 |
+| `nussknacker` | Winter | Nussknacker knackt Nüsse | 71.7 |
+| `schwarzwald` | Winter | Winter im Schwarzwald (mit Schriftzug) | 73.5 |
+| `katze_baum` | Winter | Katze spielt mit dem Christbaum | 71.1 |
+| `pyramide` | Winter | Weihnachtspyramide dreht sich im Kerzenschein | 71.5 |
+| `raeuchermann` | Winter | Räuchermännchen pafft Rauchkringel | 73.8 |
 | `weihnachtsmann_rentier` | Winter | Weihnachtsmann und Rentier (50 Bilder) | 9.0 |
 | `auspacken` | Geschenke | Geschenk auspacken: Teddy, Spielzeugzug, Stern | 47.7 |
 | `werkstatt` | Geschenke | Wichtel am Fließband, Stempel | 71.5 |
