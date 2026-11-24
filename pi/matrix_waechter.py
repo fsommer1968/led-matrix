@@ -168,6 +168,13 @@ def gif_jetzt(jetzt=None, gifs=None, start=None, wechsel=None, phasen=None):
     return gif_pfad(liste[n % len(liste)])
 
 
+def wechsel_text(zeiten):
+    """Für die Startzeile: wenige Zeiten einzeln, viele zusammengefasst (48 je Tag)."""
+    if len(zeiten) <= 4:
+        return "um " + " und ".join(zeiten)
+    return f"{len(zeiten)}-mal am Tag ({zeiten[0]} … {zeiten[-1]})"
+
+
 def stromlos_nach_zeitplan(jetzt, steckdose=None):
     """True, wenn die Steckdose die Matrix jetzt ausschaltet (oder schon aus hat): dann nicht
     suchen und nicht hochladen. Sonst begann um 08:30 ein Upload in derselben Sekunde, in der
@@ -326,7 +333,7 @@ async def main():
                      f"{matrix_zeitplan.HELL_NACH_UNTERGANG} min nach Sonnenuntergang")
     if GIFS:
         gif_text = (f"{sum(1 for v in geladen.values() if v)} von {len(alle)} GIFs in {len(PHASEN)} "
-                    f"Phasen, Wechsel um {' und '.join(GIF_WECHSEL)}, jetzt {os.path.basename(gif_jetzt())}")
+                    f"Phasen, Wechsel {wechsel_text(GIF_WECHSEL)}, jetzt {os.path.basename(gif_jetzt())}")
     else:
         gif_text = GIF
     log.info("Matrix-Wächter gestartet, %s, Tempo %d, Helligkeit %s, Steckdose %s",

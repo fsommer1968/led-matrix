@@ -202,6 +202,13 @@ class StromlosNachZeitplan(unittest.TestCase):
         self.assertFalse(mw.stromlos_nach_zeitplan(mittags, steckdose=""))   # ohne Steckdose: BLE
 
 
+class Startzeile(unittest.TestCase):
+    def test_wechselzeiten_kurz(self):
+        self.assertEqual(mw.wechsel_text(["05:30", "15:00"]), "um 05:30 und 15:00")
+        halb = [f"{h:02d}:{m:02d}" for h in range(24) for m in (0, 30)]
+        self.assertEqual(mw.wechsel_text(halb), "48-mal am Tag (00:00 … 23:30)")
+
+
 class Journal(unittest.TestCase):
     def test_stufe_als_vorsatz(self):
         import logging
