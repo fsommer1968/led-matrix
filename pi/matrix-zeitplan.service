@@ -1,0 +1,10 @@
+[Unit]
+Description=Matrix-Zeitplan: Schaltsteckdose der LED-Matrix nach Zeitplan schalten
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/etc/default/matrix-waechter
+ExecStart=/usr/bin/python3 /opt/matrix/matrix_zeitplan.py

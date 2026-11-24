@@ -1,0 +1,9 @@
+[Unit]
+Description=Matrix: Adventskalender jeden Tag kurz nach Mitternacht neu erzeugen
+
+[Timer]
+OnCalendar=*-*-* 00:05:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

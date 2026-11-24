@@ -1,0 +1,9 @@
+[Unit]
+Description=Matrix-Zeitplan jede Minute prüfen
+
+[Timer]
+OnCalendar=*-*-* *:*:05
+Persistent=false
+
+[Install]
+WantedBy=timers.target

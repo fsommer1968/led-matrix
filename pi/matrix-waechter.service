@@ -1,0 +1,16 @@
+[Unit]
+Description=Matrix-Wächter: GIF in die Surplife-LED-Matrix laden, wenn es sich ändert
+After=bluetooth.target
+Wants=bluetooth.target
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/etc/default/matrix-waechter
+WorkingDirectory=/opt/matrix
+ExecStart=/opt/matrix/.venv/bin/python /opt/matrix/matrix_waechter.py
+Restart=always
+RestartPreventExitStatus=1 2
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

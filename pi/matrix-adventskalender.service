@@ -1,0 +1,9 @@
+[Unit]
+Description=Matrix: Adventskalender-Animation für heute erzeugen (Countdown bis Heiligabend)
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/matrix/animationen
+ExecStart=/opt/matrix/.venv/bin/python /opt/matrix/animationen/erzeugen.py --ziel /opt/matrix/gifs --ohne-vorschau adventskalender
+# gleich komprimiert in den Vorrat, damit der Upload später schnell geht
+ExecStartPost=/opt/matrix/.venv/bin/python /opt/matrix/matrix_upload.py --vorrat /opt/matrix/gifs/adventskalender_64x16.gif
