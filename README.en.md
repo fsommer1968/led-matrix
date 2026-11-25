@@ -4,7 +4,7 @@
 
 An alternative to the **Surplife app**: a Raspberry Pi uploads your own animations via Bluetooth
 to a Surplife LED matrix (64×16 pixels, device name `IOTBT…`), rotates them on a schedule,
-switches the display on and off by time of day and adapts the brightness to daylight. Around 70
+switches the display on and off by time of day and adapts the brightness to daylight. Around 75
 hand-drawn (procedurally generated) Christmas, winter and New Year animations are included.
 
 **Related projects** this builds on:
@@ -254,6 +254,17 @@ All 64×16, 255 frames each, at most 76 KB compressed; 8× enlarged previews in 
 | `kirschtorte` | Winter | Black Forest cake | 54.4 |
 | `hermelin` | Winter | stoat in the snow | 55.7 |
 | `muehle` | Winter | Black Forest mill in winter | 73.9 |
+| `holzfaeller` | Winter | lumberjack and rafter in the Black Forest | 73.9 |
+| `pistenraupe` | Winter | snow groomer at night | 69.7 |
+| `wasserfall` | Winter | waterfall in winter | 73.6 |
+| `eishockey` | Winter | ice hockey on the village pond | 72.7 |
+| `kerze` | Winter | candlelight | 71.5 |
+| `bescherung` | Weihnachten | Christmas gift-giving | 71.9 |
+| `festessen` | Weihnachten | Christmas dinner | 71.7 |
+| `christmette` | Weihnachten | to midnight mass | 72.6 |
+| `wachsgiessen` | Silvester | wax pouring on New Year's Eve | 53.9 |
+| `spaziergang` | Silvester | winter walk between the years | 72.8 |
+| `raclette` | Silvester | raclette evening | 73.3 |
 | `weihnachtsmann_rentier` | Winter | Santa and reindeer (50 frames) | 9.0 |
 | `auspacken` | Presents | unwrapping a present: teddy, toy train, star | 47.7 |
 | `werkstatt` | Presents | elves at the conveyor belt | 71.5 |

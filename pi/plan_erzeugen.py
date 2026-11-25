@@ -4,7 +4,7 @@ Alle Daten (Adventssonntage, Nikolaus, Weihnachten, Silvester, Ende) entstehen a
 ab Juli gilt die kommende Saison (MATRIX_JAHR=2027 erzwingt Neujahr 2027). Danach die
 Silvester-Animationen neu erzeugen (Jahreszahl), sie heißen dann neujahr_<Jahr>.
 Ursprünglich
-(23.11.2026), jede Phase als exakte Liste von Halbstunden-Plätzen ab ihrem Beginn.
+, jede Phase als exakte Liste von Halbstunden-Plätzen ab ihrem Beginn.
 
 Regeln:
   - Animationen nur auf Plätze, in denen die Matrix an ist (Zeitplan + Sonnenuntergang);
@@ -50,13 +50,15 @@ HEIMAT = ["kuckucksuhr", "schwibbogen", "nussknacker", "schwarzwald", "katze_bau
 ALLGEMEIN += HEIMAT
 WEIHNACHTEN += HEIMAT
 # Weitere: Silvester ab 27.12., Winter allgemein, Weihnachten auch am 25./26.
-SILVESTER_NEU = ["gluecksschwein", "rakete", "kirchturm", "wunderkerzen"]
+SILVESTER_NEU = ["gluecksschwein", "rakete", "kirchturm", "wunderkerzen", "wachsgiessen", "spaziergang", "raclette"]
 SILVESTER += SILVESTER_NEU
-WINTER_NEU = ["kirschtorte", "hermelin", "muehle"]
+WINTER_NEU = ["kirschtorte", "hermelin", "muehle", "holzfaeller", "pistenraupe", "wasserfall", "eishockey"]
 ALLGEMEIN += WINTER_NEU
-FEST_NEU = ["weihnachtsmann_kamin"]
+FEST_NEU = ["weihnachtsmann_kamin", "kerze"]
 ALLGEMEIN += FEST_NEU
 WEIHNACHTEN += FEST_NEU
+WEIHNACHT_NEU = ["bescherung", "festessen", "christmette"]                                           # nur am 25./26.12.
+WEIHNACHTEN += WEIHNACHT_NEU
 
 
 def neues_jahr(heute=None):
@@ -164,7 +166,7 @@ def plan():
 
 
 def block(phasen):
-    zeilen = ["# Wechsellisten, erzeugt mit led/pi/plan_erzeugen.py (nicht von Hand ändern): alle 30 Minuten",
+    zeilen = ["# Wechsellisten, erzeugt mit pi/plan_erzeugen.py (nicht von Hand ändern): alle 30 Minuten",
               "# ein Platz je Halbstunde ab Phasenbeginn; Namen ohne _64x16.gif. Phasen: 1 vor Advent,",
               "# 2–5 Adventswochen, 6 Weihnachten, 7 Silvester, 8 Neujahrsgruß.",
               f'MATRIX_GIF_WECHSEL="{WECHSEL}"']

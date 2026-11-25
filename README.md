@@ -5,7 +5,7 @@
 Eine Alternative zur **Surplife-App**: Ein Raspberry Pi lädt eigene Animationen per Bluetooth
 in eine Surplife-LED-Matrix (64×16 Pixel, Gerätename `IOTBT…`), wechselt sie nach Plan, schaltet
 die Anzeige nach Zeitplan ein und aus und passt die Helligkeit dem Tageslicht an. Dazu gehören
-rund 70 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
+rund 75 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
 
 **Verwandte Projekte**, ohne die das hier nicht entstanden wäre:
 
@@ -255,6 +255,17 @@ Alle 64×16, je 255 Bilder, komprimiert höchstens 76 KB; 8-fach vergrößerte V
 | `kirschtorte` | Winter | Schwarzwälder Kirschtorte | 54.4 |
 | `hermelin` | Winter | Hermelin im Schnee | 55.7 |
 | `muehle` | Winter | Schwarzwaldmühle im Winter | 73.9 |
+| `holzfaeller` | Winter | Holzfäller und Flößer im Schwarzwald | 73.9 |
+| `pistenraupe` | Winter | Pistenraupe präpariert nachts den Hang | 69.7 |
+| `wasserfall` | Winter | Wasserfall im Winter | 73.6 |
+| `eishockey` | Winter | Eishockey auf dem Dorfteich | 72.7 |
+| `kerze` | Winter | Kerzenlicht | 71.5 |
+| `bescherung` | Weihnachten | Bescherung | 71.9 |
+| `festessen` | Weihnachten | Weihnachtliches Festessen | 71.7 |
+| `christmette` | Weihnachten | Zur Christmette | 72.6 |
+| `wachsgiessen` | Silvester | Wachsgießen an Silvester | 53.9 |
+| `spaziergang` | Silvester | Winterspaziergang zwischen den Jahren | 72.8 |
+| `raclette` | Silvester | Raclette-Abend | 73.3 |
 | `weihnachtsmann_rentier` | Winter | Weihnachtsmann und Rentier (50 Bilder) | 9.0 |
 | `auspacken` | Geschenke | Geschenk auspacken: Teddy, Spielzeugzug, Stern | 47.7 |
 | `werkstatt` | Geschenke | Wichtel am Fließband, Stempel | 71.5 |

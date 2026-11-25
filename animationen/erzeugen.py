@@ -2,13 +2,13 @@
 """Erzeugt die Matrix-Animationen als GIF (64×16) und 8-fache Vorschau nach led/.
 
 Aufruf (vom Repo-Ordner):
-  python3 animationen/erzeugen.py            alle
-  python3 animationen/erzeugen.py kamin …    nur diese (Modulnamen)
-  python3 animationen/erzeugen.py --bogen    zusätzlich Bildbogen (PNG) je Animation
+  .venv/bin/python led/animationen/erzeugen.py            alle
+  .venv/bin/python led/animationen/erzeugen.py kamin …    nur diese (Modulnamen)
+  .venv/bin/python led/animationen/erzeugen.py --bogen    zusätzlich Bildbogen (PNG) je Animation
   … erzeugen.py --ziel /opt/matrix/gifs --ohne-vorschau adventskalender   (auf dem Pi, täglich)
 
 Die Reihenfolge in ANIMATIONEN ist auch die Reihenfolge für den täglichen Wechsel
-(MATRIX_GIFS in pi/matrix-waechter.default).
+(MATRIX_GIFS in led/pi/matrix-waechter.default).
 """
 import importlib
 import os
@@ -44,6 +44,17 @@ ANIMATIONEN = ["bunt", "kamin", "schlitten", "schneemann", "polarlicht", "advent
                "wunderkerzen",
                "hermelin",
                "muehle",
+               "holzfaeller",
+               "pistenraupe",
+               "wasserfall",
+               "eishockey",
+               "kerze",
+               "wachsgiessen",
+               "spaziergang",
+               "bescherung",
+               "festessen",
+               "christmette",
+               "raclette",
                # HEIMAT
                # Silvester (ab 27.12.) und der Gruß um 23:59
                "feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel", "neujahr_2027"]
@@ -74,8 +85,7 @@ def _eine(m, name, titel, kw, mit_bogen, ordner, vorschau):
     n = speichern(bilder, tmp)
     os.replace(tmp, ziel)
     if vorschau:
-        os.makedirs(os.path.join(ordner, "vorschau"), exist_ok=True)
-        speichern(bilder, os.path.join(ordner, "vorschau", f"{name}_64x16_vorschau.gif"), faktor=8)
+        speichern(bilder, os.path.join(ordner, f"{name}_64x16_vorschau.gif"), faktor=8)
     if mit_bogen:
         bogen(bilder, os.path.join(ordner, f"{name}_bogen.png"))
     print(f"{name}_64x16.gif: {len(bilder)} Bilder, {n} Farben – {titel}")

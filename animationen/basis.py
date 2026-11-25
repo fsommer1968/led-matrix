@@ -1,4 +1,4 @@
-"""Gemeinsame Bausteine für die Animationen der Matrix 64×16 (23.11.2026).
+"""Gemeinsame Bausteine für die Animationen der Matrix 64×16.
 
 Jede Animation ist ein Modul mit NAME (Dateiname ohne _64x16.gif), TITEL und bilder() → Liste
 von 255 Bild-Objekten. `erzeugen.py` schreibt daraus GIF und Vorschau nach led/.
@@ -22,8 +22,11 @@ DUNKELROT = (150, 0, 20)
 GRUEN = (0, 170, 0)
 DUNKELGRUEN = (0, 90, 20)
 HELLGRUEN = (60, 255, 60)
-BRAUN = (110, 50, 10)
-HELLBRAUN = (170, 90, 30)
+# Braun und Haut am 25.11.2026 an der Matrix ausgewählt (pi/farbtafel.py, Seite 6): die früheren
+# Werte (110,50,10), (170,90,30) und (255,170,110) leuchteten auf den LEDs orange. Am Bildschirm
+# wirkt das neue Braun fast schwarz, auf der Matrix ist es Holzbraun (Helligkeitsstufe 4 von 31).
+BRAUN = (33, 11, 0)
+HELLBRAUN = (49, 19, 0)
 BLAU = (0, 60, 255)
 HELLBLAU = (0, 200, 255)
 NACHTBLAU = (0, 0, 22)
@@ -34,7 +37,7 @@ TUERKIS = (0, 255, 170)
 SCHNEE = (140, 150, 190)
 SCHNEEDECKE = (190, 200, 235)
 GRAU = (90, 90, 100)
-HAUT = (255, 170, 110)
+HAUT = (214, 173, 143)
 
 BUNT = [ROT, GOLD, BLAU, PINK, LILA, ORANGE, HELLBLAU, TUERKIS, GELB]
 
