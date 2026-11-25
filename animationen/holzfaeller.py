@@ -17,6 +17,7 @@ import random
 
 from basis import B, HAUT, NACHTBLAU, ROT, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "holzfaeller"
 TITEL = "Holzfäller und Flößer im Schwarzwald"
 
@@ -29,19 +30,19 @@ HANG = (78, 90, 140)                           # darunter gedämpft (große Flä
 WASSER = (0, 40, 125)
 WELLE = (40, 120, 230)
 TANNE = (0, 105, 40)
-STAMM = (95, 55, 22)
-HOLZ = (190, 105, 30)
-HOLZ_UNTEN = (120, 62, 16)
-HOLZ_HELL = (245, 195, 105)                    # frischer Schnitt, Späne
+STAMM = (33, 19, 8)
+HOLZ = (66, 36, 10)
+HOLZ_UNTEN = (41, 21, 5)
+HOLZ_HELL = (82, 65, 35)                    # frischer Schnitt, Späne
 MUETZE = (255, 170, 0)
 KARO = (140, 0, 0)
-HOSE = (120, 80, 45)
+HOSE = (41, 27, 15)
 AUGE = (50, 25, 10)
-STIEL = (200, 150, 80)
+STIEL = (66, 49, 26)
 KLINGE = (200, 210, 230)
 HUT = (240, 230, 170)
 KITTEL = (0, 120, 255)
-STANGE = (210, 175, 110)
+STANGE = (66, 55, 34)
 SEIL = (255, 210, 0)
 
 TANNEN_LINKS, TANNE_X = (2, 7), 21             # zwei Tannen bleiben stehen, die dritte wird gefällt

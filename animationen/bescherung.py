@@ -18,23 +18,24 @@ import random
 
 from basis import B, GELB, GOLD, HAUT, PINK, ROT, WEISS, Bild
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "bescherung"
 TITEL = "Bescherung"
 
 FLUR = (6, 8, 40)                              # Wand im dunklen Flur
-ZIMMER = (70, 20, 6)                           # Wand im Wohnzimmer, warm
-BODEN = (95, 48, 15)
-RAHMEN = (165, 90, 30)
-TUER = (105, 48, 10)
+ZIMMER = (33, 9, 3)                           # Wand im Wohnzimmer, warm
+BODEN = (33, 17, 5)
+RAHMEN = (58, 31, 10)
+TUER = (33, 15, 3)
 LICHT = (240, 160, 40)                         # Lichtschein in der offenen Tür
 TANNE = (0, 120, 30)
-STAMM = (120, 60, 15)
+STAMM = (41, 21, 5)
 FLAMME_HELL = (255, 255, 150)
 GLOCKE_GOLD = (255, 200, 0)
 BLAU = (0, 90, 255)
 LILA = (170, 0, 255)
 BAND = (200, 210, 240)
-FELL = (215, 125, 40)
+FELL = (74, 43, 14)
 AUGE = (50, 25, 10)
 
 # Tür: Rahmen x = 14 und 23, Blatt x = 15…22 (Angel rechts), Zeile 4 Rahmen oben, Blatt 5…14

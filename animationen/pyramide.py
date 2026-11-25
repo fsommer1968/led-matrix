@@ -15,6 +15,7 @@ import math
 
 from basis import B, GELB, HAUT, NACHTBLAU, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "pyramide"
 TITEL = "Weihnachtspyramide dreht sich im Kerzenschein"
 
@@ -22,9 +23,9 @@ RUNDE = 255
 UMDREHUNGEN = 2                                # je Runde; alles sitzt auf demselben Stab
 CX = 32                                        # Mittelstab
 
-HOLZ = (200, 125, 45)
-HOLZ_DUNKEL = (120, 66, 20)
-BANK_KANTE = (100, 54, 18)                     # Fensterbank: Oberkante
+HOLZ = (66, 41, 15)
+HOLZ_DUNKEL = (41, 23, 7)
+BANK_KANTE = (33, 18, 6)                     # Fensterbank: Oberkante
 BANK = (58, 30, 10)                            # … darunter gedämpft (große Fläche)
 KNAUF = (230, 30, 20)                          # roter Knauf auf dem Stab
 FLUEGEL = (240, 205, 140)                      # helles Holz, hebt sich von den Flammen ab

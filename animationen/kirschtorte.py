@@ -12,23 +12,24 @@ Messer, Heber und Gabel stehen senkrecht oder liegen waagerecht, die Wand bleibt
 """
 from basis import B, GELB, Bild
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "kirschtorte"
 TITEL = "Schwarzwälder Kirschtorte"
 
 WAND = (0, 0, 0)
 DECKE = (0, 75, 30)                            # Tischdecke (eine Zeile)
-SCHOKO = (130, 55, 10)                         # Böden und Raspeln (gedämpft, große Fläche)
+SCHOKO = (41, 17, 3)                         # Böden und Raspeln (gedämpft, große Fläche)
 SAHNE = (255, 250, 235)
 KIRSCHE = (255, 0, 20)
 TELLER = (110, 128, 185)                       # Porzellan, bläulich und gedämpft (hebt sich von der Sahne ab)
 GLANZ = (215, 228, 255)                        # Glanzlicht auf der Tortenplatte, wenn sie sich dreht
 STAHL = (130, 180, 255)                        # Klinge, Heberblatt, Gabel
-GRIFF = (230, 130, 20)
-RAHMEN = (200, 105, 15)                        # Fensterrahmen, warmes Holz
+GRIFF = (74, 42, 6)
+RAHMEN = (66, 35, 5)                        # Fensterrahmen, warmes Holz
 NACHT = (0, 12, 62)
 SCHNEE = (200, 210, 240)
 TANNE = (0, 120, 40)
-STAMM = (100, 50, 15)
+STAMM = (33, 16, 5)
 
 X0 = 17                                        # linke Kante der Torte
 BREIT = 24                                     # Spalten der ganzen Torte

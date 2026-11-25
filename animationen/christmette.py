@@ -14,6 +14,7 @@ teilen 255.
 """
 from basis import GELB, GOLD, NACHTBLAU, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "christmette"
 TITEL = "Zur Christmette"
 
@@ -36,8 +37,8 @@ STERNGELB = (255, 225, 110)
 LATERNE = (255, 190, 40)
 BUEGEL = (150, 80, 0)                          # Bügel und Dach der Laterne
 SCHEIN = (255, 170, 60)                        # Schein von Laterne und Tür auf dem Schnee
-HAUT = (255, 170, 110)
-STIEFEL = (110, 70, 40)
+HAUT = (214, 172, 143)
+STIEFEL = (33, 21, 12)
 FLOCKE = (140, 150, 190)
 
 # ── Kirche: Turm (Spalten 41 … 47) mit Portal, Langhaus (48 … 63) ──

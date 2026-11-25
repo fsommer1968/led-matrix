@@ -14,6 +14,7 @@ erstem Hund (dort sind die Spalten ohnehin einzeln), kein Schneefall.
 """
 from basis import B, GELB, HAUT, NACHTBLAU, ROT, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "hundeschlitten"
 TITEL = "Huskygespann zieht den Schlitten durch den Schnee"
 
@@ -25,11 +26,11 @@ FELL = (96, 104, 130)
 LEINE = (190, 150, 70)
 JACKE = (255, 50, 0)
 HOSE = (0, 110, 255)
-HOLZ = (210, 120, 30)
+HOLZ = (66, 38, 9)
 KUFE = (140, 140, 165)
 SACK = (0, 170, 60)
 TANNE = (0, 95, 35)
-STAMM = (90, 50, 20)
+STAMM = (33, 18, 7)
 MOND = (240, 230, 170)
 STERN = (255, 240, 200)
 STERNE = [(9, 0, 0, 51), (23, 2, 20, 85)]      # x, y, Phase, Periode

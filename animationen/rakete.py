@@ -15,6 +15,7 @@ from basis import (B, BLAU, GELB, GOLD, HAUT, HELLBLAU, HELLGRUEN, LILA, ORANGE,
                    dimmen, mischen)
 from feuerwerk import jedes_bild_anders
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "rakete"
 TITEL = "Raketen starten aus der Flasche"
 
@@ -24,9 +25,9 @@ GLAS = (0, 150, 50)                             # Flasche
 GLANZ = (110, 240, 130)
 ETIKETT = (200, 190, 150)
 FOLIE = (255, 180, 0)
-STAB = (190, 120, 50)
+STAB = (66, 42, 17)
 SCHNUR = (170, 170, 170)                        # Zündschnur
-HOLZ = (220, 170, 100)                          # Streichholz
+HOLZ = (74, 57, 34)                          # Streichholz
 FLAMME = (255, 235, 150)
 AERMEL = BLAU
 RAUCH = (60, 60, 75)

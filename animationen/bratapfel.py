@@ -12,11 +12,12 @@ import random
 
 from basis import B, BUNT, GELB, ROT, WEISS, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "bratapfel"
 TITEL = "Bratapfel im Ofen und Kakao mit Sahne"
 
 WAND = (0, 0, 0)
-TISCH = (150, 85, 35)
+TISCH = (49, 28, 12)
 OFEN = (62, 64, 80)
 INNEN = (32, 9, 0)                             # Ofenraum: ganz schwacher warmer Schein
 INNEN_HELL = (42, 12, 0)
@@ -27,7 +28,7 @@ APFEL = (255, 0, 10)
 APFEL_GAR = (200, 20, 0)
 FUELLUNG = (255, 200, 90)
 BLATT = (40, 200, 40)
-KAKAO = (135, 68, 25)
+KAKAO = (41, 21, 8)
 TASSE = (0, 120, 235)
 TASSE_HELL = (120, 200, 255)
 SAHNE = (255, 250, 235)

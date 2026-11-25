@@ -18,6 +18,7 @@ import math
 
 from basis import B, NACHTBLAU, ROT, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "muehle"
 TITEL = "Schwarzwaldmühle im Winter"
 
@@ -28,9 +29,9 @@ STERN = (255, 240, 200)
 STERNE = []                                    # Sterne und Bachlichter weggelassen: sonst 81,6 KB (24.11.2026)
 KANTE = (215, 225, 250)                        # Schnee: Oberkante
 DACH = (150, 162, 205)                         # verschneites Dach, gedämpft
-WAND = (95, 50, 16)
+WAND = (33, 17, 6)
 FENSTER = (255, 185, 40)
-HOLZ = (200, 110, 30)                          # Rad und Rinne
+HOLZ = (66, 36, 10)                          # Rad und Rinne
 SCHAUFEL = (255, 190, 90)                      # leere Schaufeln: helles Holz
 WASSER = (0, 170, 255)                         # fallendes Wasser, Rinne, volle Schaufeln
 BACH = (0, 45, 150)                            # Bach, gedämpft (große Fläche)
@@ -39,8 +40,8 @@ EIS = (170, 225, 255)
 TANNE = (0, 100, 40)
 VOGEL_KOPF = (60, 60, 75)
 VOGEL_RUECKEN = (120, 125, 150)
-FELL = (215, 125, 45)
-FELL_DUNKEL = (110, 60, 22)
+FELL = (74, 43, 15)
+FELL_DUNKEL = (33, 18, 7)
 NASE = (60, 30, 15)
 
 CX, CY, R = 11, 9, 6                           # Rad: Mitte und Radius (Zeilen 3 bis 15)

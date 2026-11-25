@@ -20,6 +20,7 @@ import random
 
 from basis import B, GOLD, WEISS, Bild, dimmen, mischen, textbreite
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "advent"
 TITEL = "Adventskranz mit vier Kerzen"
 VARIANTEN = [(f"advent{n}", f"Adventskranz {n}. Advent ({n} Kerze{'n' if n > 1 else ''}, ohne Text)", {"n": n})
@@ -47,7 +48,7 @@ def sterne(bild, f):
 # Kranz: Tannengrün als Kachel, die sich alle 5 Spalten wiederholt, aus nur drei verschiedenen
 # Spalten (A B A C B). Die Matrix komprimiert jedes Bild einzeln und spaltenweise: gleiche Spalten
 # kosten fast nichts, ein unregelmäßiges Nadelmuster dagegen in jedem der 255 Bilder (Größengrenze
-# 76000 Bytes je Animation, (23.11.2026). Zeilen 11–15: d dunkel, m mittel, l hell, . frei.
+# 76000 Bytes je Animation, 23.11.2026). Zeilen 11–15: d dunkel, m mittel, l hell, . frei.
 SPALTE = {"A": "mlmdd", "B": ".mdld", "C": "..lmd"}
 KACHEL = "ABACB"
 ENDE = ("...md", "..lmd")                   # runde Enden: äußerste und zweite Spalte, beidseits gleich
@@ -171,7 +172,7 @@ def einlauf_versatz(f, start):
     return -1 if t == FALL else 0
 
 
-HOLZ = (210, 160, 100)
+HOLZ = (66, 50, 31)
 
 
 def streichholz(bild, kx, ky, brennt=True, f=0):

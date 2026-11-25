@@ -7,6 +7,7 @@ import random
 
 from basis import (B, GELB, GOLD, NACHTBLAU, WEISS, Bild, dimmen, mischen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "hirten"
 TITEL = "Hirten auf dem Feld, Engel erscheint"
 
@@ -14,10 +15,10 @@ WIESE = (6, 48, 14)
 WIESE_KANTE = (20, 95, 30)
 WIESE_LICHT = (70, 130, 40)
 WOLLE = (235, 235, 225)
-SCHAF_KOPF = (165, 115, 80)
-SCHAF_BEIN = (120, 85, 60)
-HAUT = (235, 165, 115)
-STAB = (150, 90, 35)
+SCHAF_KOPF = (58, 40, 28)
+SCHAF_BEIN = (41, 29, 21)
+HAUT = (197, 159, 132)
+STAB = (49, 30, 12)
 LICHT = (255, 200, 80)
 FLUEGEL = (150, 200, 255)
 BODEN = 13                                    # oberste Zeile der Wiese; Füße stehen auf Zeile 12

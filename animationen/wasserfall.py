@@ -17,6 +17,7 @@ teilen 255.
 """
 from basis import B, GELB, NACHTBLAU, WEISS, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "wasserfall"
 TITEL = "Wasserfall im Winter"
 
@@ -31,8 +32,8 @@ BACH = (10, 70, 210)
 GLANZ = (110, 180, 255)
 EIS = (90, 220, 255)
 TANNE = (0, 105, 40)
-STAMM = (95, 55, 22)
-AMSEL = (135, 68, 28)
+STAMM = (33, 19, 8)
+AMSEL = (41, 21, 9)
 BEIN = (210, 115, 20)
 MORGEN_OBEN, MORGEN_UNTEN = (60, 18, 64), (180, 72, 40)              # Morgenrot: obere und untere Himmelszeile
 

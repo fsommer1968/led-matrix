@@ -20,15 +20,16 @@ import random
 from basis import (BLAU, BRAUN, BUNT, DUNKELGRUEN, GELB, GOLD, GRUEN, HELLBRAUN, LILA, NACHTBLAU,
                    ORANGE, PINK, ROT, SCHNEEDECKE, TUERKIS, WEISS, Bild, Schnee, mischen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "kamin"
 TITEL = "Kaminfeuer mit Strümpfen, Fenster und Baum"
 
 WAND = (40, 8, 12)
 ZIEGEL = (150, 45, 25)
 FUGE = (90, 30, 20)
-SIMS = (120, 60, 20)
-HOLZ = (90, 40, 10)
-BODEN = (70, 32, 10)
+SIMS = (41, 21, 7)
+HOLZ = (33, 15, 4)
+BODEN = (33, 15, 5)
 MOND = (235, 230, 180)
 RUSS = (8, 2, 0)                        # Rückwand der Feueröffnung
 

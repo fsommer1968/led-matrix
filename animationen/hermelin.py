@@ -15,6 +15,7 @@ import math
 
 from basis import B, H, SCHWARZ, Bild
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "hermelin"
 TITEL = "Hermelin im Schnee"
 
@@ -27,10 +28,10 @@ WEHE = (112, 126, 178)                         # Kamm einer nahen Schneewehe
 STAUB = (165, 178, 225)                        # aufstiebender Schnee
 FELL = (116, 130, 182)                         # Umriss im Sprung: nur ein Hauch heller als der Schnee
 SCHATTEN = (58, 68, 112)                       # Schatten unter dem Sprung
-HOLZ = (100, 58, 24)
-ZWEIG = (88, 52, 26)
+HOLZ = (33, 19, 8)
+ZWEIG = (33, 19, 10)
 GRAS = (135, 105, 30)
-FEDER = (150, 96, 44)
+FEDER = (49, 32, 14)
 FLUEGEL = (205, 150, 90)
 BRUST = (255, 95, 0)
 

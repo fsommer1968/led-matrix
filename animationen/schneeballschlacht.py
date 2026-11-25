@@ -7,6 +7,7 @@ import random
 
 from basis import B, H, HAUT, PINK, ROT, WEISS, Bild, Schnee, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schneeballschlacht"
 TITEL = "Schneeballschlacht und Schneeengel"
 
@@ -16,7 +17,7 @@ BODEN = (105, 118, 165)
 WALL = (235, 240, 255)
 WALL_SCHATTEN = (150, 165, 215)
 TANNE = (0, 70, 30)
-HOSE = (120, 80, 45)
+HOSE = (41, 27, 15)
 AUGE = (50, 25, 10)
 FELD = (38, 48, 88)                            # Schneefläche von oben (nachts, gedämpft)
 ABDRUCK = (185, 198, 240)

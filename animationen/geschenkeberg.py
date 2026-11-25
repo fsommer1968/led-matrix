@@ -16,11 +16,12 @@ import random
 from basis import (B, BLAU, BRAUN, BUNT, GELB, GOLD, HELLBLAU, LILA, ORANGE, PINK, ROT, TUERKIS,
                    WEISS, Bild, dimmen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "geschenkeberg"
 TITEL = "Geschenkeberg unter dem Baum"
 
 HINTERGRUND = (14, 3, 10)
-BODEN = (75, 36, 14)
+BODEN = (33, 16, 6)
 BAUM_X = 8
 BAUMGRUEN = (0, 150, 30)
 HALB = [1, 2, 3, 2, 3, 4, 5, 4, 5, 6, 7, 8]           # halbe Breite des Baums je Zeile ab y = 2

@@ -8,18 +8,19 @@ drei Spalten breit mit zwei gleichen), waagerechtes Seil, drei Sterne, eine schl
 """
 from basis import B, GELB, HAUT, NACHTBLAU, PINK, ROT, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "rodeln"
 TITEL = "Kinder rodeln den Hang hinunter"
 
 KANTE = (215, 225, 250)                        # Oberkante des Hangs
 HANG = (78, 90, 140)                           # darunter gedämpft (große Fläche)
-HOLZ = (210, 120, 30)
+HOLZ = (66, 38, 9)
 KUFE = (140, 140, 165)
 SEIL = (150, 130, 90)
-HOSE = (120, 80, 45)
+HOSE = (41, 27, 15)
 AUGE = (50, 25, 10)
 TANNE = (0, 95, 35)
-STAMM = (90, 50, 20)
+STAMM = (33, 18, 7)
 MOND = (240, 230, 170)
 STERN = (255, 240, 200)
 STERNE = [(13, 1, 0, 32), (36, 3, 11, 40), (47, 0, 23, 24)]          # x, y, Phase, Periode

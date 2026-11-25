@@ -17,6 +17,7 @@ import math
 
 from basis import B, GELB, NACHTBLAU, ORANGE, ROT, WEISS, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schneepflug"
 TITEL = "Schneepflug räumt nachts die Straße"
 
@@ -25,11 +26,11 @@ KANTE = (215, 225, 250)                        # heller Schnee: hinterer Straße
 DECKE = (84, 96, 148)                          # Schneedecke auf der Fahrbahn, gedämpft (große Fläche)
 ASPHALT = (14, 14, 24)                         # geräumte Fahrbahn
 DACH = (150, 160, 205)                         # Schnee auf den Dächern (hinten, etwas matter)
-HAUS = (84, 44, 36)
+HAUS = (33, 17, 14)
 HAUS_GRUEN = (38, 76, 58)
 FENSTER = (255, 185, 60)
 DUNKEL = (30, 18, 22)                          # Fenster ohne Licht
-TUER = (150, 95, 30)
+TUER = (49, 31, 10)
 PFOSTEN = (72, 72, 92)
 LAMPE = (255, 225, 150)
 HOF = (120, 88, 36)                            # Lichthof über der Lampe

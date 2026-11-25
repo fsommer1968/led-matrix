@@ -14,6 +14,7 @@ import math
 
 from basis import B, NACHTBLAU, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "eule"
 TITEL = "Schneeeule gleitet durch die Winternacht"
 
@@ -23,7 +24,7 @@ STERN = (255, 240, 200)
 STERNE = [(5, 2, 0, 85), (36, 0, 30, 51), (61, 3, 60, 85)]            # x, y, Phase, Periode (teilt 255)
 KANTE = (215, 225, 250)                        # Oberkante der Schneedecke
 EBENE = (78, 90, 140)                          # darunter gedämpft
-HOLZ = (105, 60, 25)
+HOLZ = (33, 19, 8)
 AST_SCHNEE = (150, 165, 220)                   # Schnee auf den Ästen: gedämpfter als die Eule
 SCHATTEN = (150, 160, 205)                     # Unterseite der Flügel, angelegte Flügel
 TUPFEN = (85, 88, 110)

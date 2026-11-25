@@ -9,11 +9,12 @@ Eiszapfen an der rechten Dachecke).
 """
 from basis import (B, BUNT, GRUEN, NACHTBLAU, ROT, SCHNEEDECKE, WEISS, Bild, Schnee, dimmen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "lebkuchen"
 TITEL = "Lebkuchenhaus mit Eiszapfen und Lebkuchenmann"
 
-LEBKUCHEN = (185, 95, 25)
-DUNKEL = (105, 48, 12)
+LEBKUCHEN = (58, 30, 8)
+DUNKEL = (33, 15, 4)
 GUSS = (250, 250, 255)
 EIS = (120, 210, 255)
 HX, HB = 18, 26                 # Haus links, Breite

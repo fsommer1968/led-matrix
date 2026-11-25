@@ -8,16 +8,17 @@ import random
 
 from basis import GELB, GOLD, Bild, dimmen, mischen, textbreite
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "stille_nacht"
 TITEL = "Stille Nacht: Kind in der Krippe, Kerzenlicht"
 
 HIMMEL = (0, 0, 20)
-HOLZ = (150, 80, 25)
-HOLZ_DUNKEL = (95, 50, 15)
+HOLZ = (49, 26, 8)
+HOLZ_DUNKEL = (33, 17, 5)
 STROH = (230, 180, 40)
 TUCH = (240, 240, 250)
 TUCH_SCHATTEN = (150, 170, 220)
-HAUT = (255, 180, 130)
+HAUT = (214, 171, 143)
 SCHEIN = (255, 210, 90)
 WACHS = (235, 225, 200)
 TEXT_X0, TEXT_X1 = 28, 63                     # Platz für die Wörter rechts

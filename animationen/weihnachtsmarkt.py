@@ -14,12 +14,13 @@ import math
 from basis import (B, GELB, GOLD, HAUT, HELLBLAU, NACHTBLAU, PINK, ROT, SCHNEEDECKE, TUERKIS, WEISS,
                    Bild, dimmen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "weihnachtsmarkt"
 TITEL = "Weihnachtsmarkt mit Karussell"
 
 N = 255
-HOLZ = (120, 65, 20)
-HOLZ_HELL = (180, 105, 40)
+HOLZ = (41, 22, 7)
+HOLZ_HELL = (58, 34, 13)
 SCHNEE_DACH = SCHNEEDECKE
 CREME = (255, 215, 150)
 LICHT = (150, 85, 20)                         # Fenster der Buden, warm erleuchtet

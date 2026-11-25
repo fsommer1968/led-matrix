@@ -12,6 +12,7 @@ import math
 
 from basis import B, NACHTBLAU, WEISS, Bild, dimmen, sternschnuppe
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "winterwald"
 TITEL = "Reh und Fuchs im Winterwald"
 
@@ -26,10 +27,10 @@ BODEN = (105, 118, 165)
 SPUR = (120, 132, 185)
 TANNE_HINTEN = (0, 52, 26)
 TANNE_VORN = (0, 115, 45)
-STAMM = (95, 55, 22)
+STAMM = (33, 19, 8)
 MOND = (240, 230, 175)
-FELL = (205, 120, 45)
-FELL_DUNKEL = (105, 58, 22)
+FELL = (66, 39, 14)
+FELL_DUNKEL = (33, 18, 7)
 FUCHS = (255, 105, 0)
 FUCHS_DUNKEL = (160, 60, 0)
 NASE = (60, 30, 15)

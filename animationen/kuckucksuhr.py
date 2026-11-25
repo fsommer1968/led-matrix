@@ -15,20 +15,21 @@ import math
 
 from basis import GELB, GOLD, ORANGE, SCHWARZ, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "kuckucksuhr"
 TITEL = "Schwarzwälder Kuckucksuhr"
 
-WAND = (26, 10, 4)                             # Stubenwand, fast dunkel
-HOLZ = (95, 42, 8)                             # Häuschen (große Fläche, gedämpft)
+WAND = (0, 0, 0)                               # Stubenwand schwarz: Braun auf Stufe 3 verschmolz mit dem Gehäuse (25.11.2026)
+HOLZ = (33, 15, 3)                             # Häuschen (große Fläche, gedämpft)
 DACH = (215, 225, 250)                         # Schnee auf dem Dach
-TUER = (190, 100, 25)
+TUER = (66, 35, 9)
 BLATT = (215, 195, 135)                        # Zifferblatt
 ZEIGER_STUNDE = (200, 0, 0)
-STANGE = (215, 165, 50)                        # Messing: Pendelstange und Arm des Kuckucks
-ZAPFEN = (170, 90, 25)
-ZAPFEN_DUNKEL = (105, 52, 12)
+STANGE = (74, 57, 17)                        # Messing: Pendelstange und Arm des Kuckucks
+ZAPFEN = (58, 30, 8)
+ZAPFEN_DUNKEL = (33, 16, 4)
 KETTE = (130, 130, 140)
-RAHMEN = (140, 75, 25)
+RAHMEN = (49, 26, 9)
 HIMMEL = (0, 0, 60)
 BODEN = (150, 160, 200)
 FLOCKE = (170, 180, 215)

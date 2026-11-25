@@ -20,11 +20,12 @@ import random
 from basis import (B, BUNT, GOLD, NACHTBLAU, ROT, SCHNEEDECKE, WEISS, Bild, Schnee, dimmen,
                    mischen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "rentier"
 TITEL = "Rentier Rudolph mit leuchtender Nase"
 
-FELL = (165, 85, 28)
-FELL_DUNKEL = (100, 50, 16)
+FELL = (58, 30, 10)
+FELL_DUNKEL = (33, 16, 5)
 BAUCH = (225, 175, 110)
 GEWEIH = (225, 190, 130)
 HUF = (95, 75, 95)

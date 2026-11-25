@@ -24,12 +24,13 @@ nichts flackert (keine Kerze, kein Schnee). Eine Kerze passte nicht mehr unter d
 """
 from basis import GELB, HAUT, ROT, WEISS, Bild
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "nussknacker"
 TITEL = "Nussknacker knackt Nüsse"
 
 WAND = (0, 26, 16)                             # dunkle Wand (große Fläche)
-TISCH_KANTE = (150, 85, 30)                    # Tischplatte: helle Kante …
-TISCH = (80, 42, 12)                           # … und gedämpfte Front
+TISCH_KANTE = (49, 28, 10)                    # Tischplatte: helle Kante …
+TISCH = (33, 17, 5)                           # … und gedämpfte Front
 MUETZE = (20, 70, 255)
 GOLD = (255, 170, 0)
 BART = (170, 180, 215)                         # Haar und Bart, etwas dunkler als die Zähne
@@ -38,13 +39,13 @@ NASE = (255, 95, 60)
 SCHNURRBART = (40, 20, 10)
 RACHEN = (55, 0, 5)
 SOCKEL = (0, 140, 50)
-HEBEL = (210, 130, 30)
-NUSS = (200, 120, 40)
-NUSS_DUNKEL = (140, 78, 22)                   # Ecken der Nuss: wirkt rund
+HEBEL = (66, 41, 9)
+NUSS = (66, 39, 13)
+NUSS_DUNKEL = (49, 27, 8)                   # Ecken der Nuss: wirkt rund
 KERN = (250, 220, 150)
 AERMEL = (200, 0, 20)                          # roter Ärmel mit weißem Rand
-SACK = (160, 120, 65)                          # Jute, gedämpft
-SACK_RAND = (220, 180, 110)                    # umgekrempelter Rand
+SACK = (49, 37, 20)                          # Jute, gedämpft
+SACK_RAND = (74, 61, 37)                    # umgekrempelter Rand
 FLICKEN = (200, 0, 20)                         # roter Flicken
 
 # Nussknacker von vorn, 9 breit, 16 hoch (Mund zu); b Mütze, g Gold, w Bart, h Haut, a Auge,

@@ -19,6 +19,7 @@ import math
 
 from basis import B, GELB, HAUT, NACHTBLAU, ROT, SCHRIFT, WEISS, Bild, dimmen, sternschnuppe
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schwarzwald"
 TITEL = "Winter im Schwarzwald"
 
@@ -30,15 +31,15 @@ BODEN = (105, 118, 165)
 WALD = (0, 50, 26)                             # Waldsaum hinten, dunkel
 WIPFEL = (0, 30, 22)                           # seine oberste Zeile, noch dunkler
 TANNE = (0, 120, 45)
-STAMM = (95, 55, 22)
+STAMM = (33, 19, 8)
 DACH = (150, 162, 205)                         # verschneites Dach, gedämpft
-BALKEN = (130, 65, 20)
-WAND = (80, 42, 14)
+BALKEN = (41, 21, 6)
+WAND = (33, 17, 6)
 FENSTER_AUS = (26, 20, 34)
 FENSTER_AN = (255, 185, 40)
 FLOCKE = (150, 160, 200)
 KLEID = (70, 60, 170)
-STIEFEL = (120, 70, 30)
+STIEFEL = (41, 24, 10)
 AUGE = (50, 25, 10)
 
 HAUS_X = 25                                    # Haus: 15 Spalten unter A, R und Z

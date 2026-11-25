@@ -10,16 +10,17 @@ import math
 
 from basis import B, WEISS, Bild, Schnee, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "futterhaus"
 TITEL = "Vögel am Futterhaus"
 
 HIMMEL = (8, 18, 48)                           # Dämmerung, damit die Vögel leuchten
 KANTE = (215, 225, 250)
 BODEN = (105, 118, 165)
-HOLZ = (170, 100, 40)
-HOLZ_DUNKEL = (110, 62, 24)
+HOLZ = (58, 34, 14)
+HOLZ_DUNKEL = (33, 19, 7)
 DACH = (150, 50, 25)
-ZWEIG = (125, 78, 36)
+ZWEIG = (41, 26, 12)
 BEERE = (255, 0, 30)
 KORN = (230, 180, 60)
 SCHNEE = Schnee(anzahl=6, saat=951, farbe=(120, 130, 175))   # wenige Flocken: jede kostet in jedem Bild

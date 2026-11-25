@@ -10,13 +10,14 @@ import math
 from basis import (B, GELB, GRAU, HAUT, HELLBLAU, HELLGRUEN, LILA, NACHTBLAU, PINK, ROT, SCHNEEDECKE,
                    TUERKIS, WEISS, Bild, dimmen, sternschnuppe)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schlittenflug"
 TITEL = "Schlittenflug über dem nächtlichen Dorf"
 
-FELL = (185, 100, 35)
+FELL = (58, 31, 11)
 GEWEIH = (215, 170, 100)
 KUFE = (255, 190, 0)
-SACK = (150, 95, 30)
+SACK = (49, 31, 10)
 
 RENTIER = [  # schaut nach rechts; Galopp: gestreckt / angezogen; n = Nase
     [".....g.g.", "......ffn", "wffffff..", ".ffffff..", ".f....f..", "f......f."],
@@ -50,7 +51,7 @@ HAEUSER = [  # x, Spalten (K Kamin, F Fenster, . Wand), Dachfarbe, Fenster 2 hoc
 ]
 SORTE = [0, 1, 0, 1, 0]                 # gleiche Sorte: der Rauch steigt im Gleichtakt
 KAMIN_X = [x + muster.index("K") for x, muster, _, _ in HAEUSER]
-WAND = (85, 55, 35)
+WAND = (33, 21, 14)
 KAMIN = (120, 45, 30)
 FENSTER_AN = (255, 190, 50)
 FENSTER_MATT = (120, 75, 15)

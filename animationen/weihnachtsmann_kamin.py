@@ -16,6 +16,7 @@ Sterne und Nasenglimmen laufen in Perioden, die 255 teilen (51, 85, 15).
 """
 from basis import HAUT, NACHTBLAU, ROT, WEISS, B, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "weihnachtsmann_kamin"
 TITEL = "Weihnachtsmann steckt im Schornstein fest"
 
@@ -28,14 +29,14 @@ RAND = (215, 120, 60)                          # Kranz oben am Schornstein
 MOND = (240, 230, 170)
 STERN = (255, 240, 200)
 STERNE = [(17, 1, 0, 51), (24, 5, 20, 85), (46, 0, 40, 51)]          # x, y, Phase, Periode (teilt 255)
-FELL = (190, 105, 35)
-FELL_DUNKEL = (110, 60, 22)
+FELL = (66, 36, 12)
+FELL_DUNKEL = (33, 18, 7)
 GEWEIH = (220, 175, 105)
 AUGE = (50, 25, 10)
 NASE_MATT = (255, 80, 50)                      # die rote Nase glimmt im Wechsel
 KUFE = (255, 190, 0)
 SCHLITTEN = (0, 150, 60)
-SACK = (160, 100, 35)
+SACK = (49, 31, 11)
 STIEFEL = (75, 75, 95)
 RUSS = (105, 100, 110)                         # Rußwolke
 RUSS_ROT = (150, 34, 28)                       # rußiger Mantel

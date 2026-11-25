@@ -15,6 +15,7 @@ hängt nur vom Bild im Durchgang ab oder hat einen Takt, der in 255 aufgeht (Fla
 """
 from basis import B, GELB, GOLD, HAUT, ORANGE, WEISS, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "wachsgiessen"
 TITEL = "Wachsgießen an Silvester"
 
@@ -22,7 +23,7 @@ RUNDE = 255
 GANG = 85                                      # ein Durchgang (Herz, Kleeblatt, Stern)
 
 NACHT = (0, 0, 14)
-TISCH = (110, 50, 10)
+TISCH = (33, 15, 3)
 KERZE = (235, 215, 170)
 TELLER = (170, 100, 0)                         # Kerzenteller
 KERN = (255, 245, 170)                         # heller Kern der Flamme

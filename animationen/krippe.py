@@ -15,17 +15,18 @@ import math
 
 from basis import (B, GELB, GOLD, LILA, NACHTBLAU, ROT, WEISS, Bild, Sterne, dimmen, mischen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "krippe"
 TITEL = "Stern von Bethlehem über dem Stall"
 
 SAND = (95, 68, 28)
 SAND_HELL = (140, 104, 48)
-BALKEN = (120, 66, 20)
-DACH = (150, 95, 30)
+BALKEN = (41, 23, 7)
+DACH = (49, 31, 10)
 STROH = (220, 170, 50)
-KAMEL = (200, 140, 65)
-KAMEL_DUNKEL = (130, 85, 35)
-HAUT = (255, 180, 120)
+KAMEL = (66, 46, 21)
+KAMEL_DUNKEL = (41, 27, 11)
+HAUT = (214, 174, 143)
 STERNE = Sterne(anzahl=0)
 # Sieben Sterne von Hand verteilt (x, y, Phase, Periode) statt 18 zufälliger: jeder einzelne
 # Funkelpunkt kostet in jedem Bild etwa 9 Bytes, die Matrix speichert nur 80 KB je Animation.

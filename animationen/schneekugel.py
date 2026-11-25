@@ -15,6 +15,7 @@ import random
 
 from basis import NACHTBLAU, WEISS, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schneekugel"
 TITEL = "Schneekugel wird geschüttelt"
 
@@ -23,7 +24,7 @@ GLANZ = (235, 245, 255)                        # Lichtreflex oben links
 HIMMEL = (0, 22, 78)                           # in der Kugel: etwas heller als der Grund
 BODEN = (215, 225, 250)                        # Schnee am Boden und auf dem Dach
 TANNE = (0, 165, 50)
-STAMM = (120, 60, 20)
+STAMM = (41, 21, 7)
 WAND = (215, 35, 20)
 DACH = (120, 15, 15)
 FENSTER, GLUT = (255, 205, 40), (255, 160, 15)  # warmes Licht, atmet langsam zwischen Gelb und Orange

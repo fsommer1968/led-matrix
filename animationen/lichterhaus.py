@@ -7,13 +7,14 @@ import math
 
 from basis import (B, GELB, GOLD, NACHTBLAU, PINK, ROT, WEISS, Bild, dimmen, regenbogen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "lichterhaus"
 TITEL = "Haus wird mit Lichterketten geschmückt"
 
-WAND = (62, 44, 40)
+WAND = (33, 23, 21)
 DACH = (36, 30, 44)
 FENSTER = (120, 75, 20)
-TUER = (95, 45, 15)
+TUER = (33, 16, 5)
 TANNE = (0, 70, 22)
 BODEN = (120, 130, 165)
 GRUEN = (0, 220, 60)

@@ -11,6 +11,7 @@ import math
 from basis import (B, BUNT, GELB, GOLD, HELLBRAUN, NACHTBLAU, ORANGE, ROT, SCHNEEDECKE, Bild, Schnee,
                    Sterne, dimmen, regenbogen, textbreite)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schneemann"
 TITEL = "Schneemann mit buntem Schal und FROHES FEST"
 
@@ -19,7 +20,7 @@ SCHNEEBALL = (235, 240, 255)
 SCHATTEN = (150, 165, 215)
 HUT = (60, 50, 200)
 HUTBAND = GOLD
-VOGEL = (190, 110, 45)
+VOGEL = (66, 38, 16)
 CX = 11
 # Die drei Kugeln als Sprites (w = Schnee, s = Schatten); obere linke Ecke am fertigen Schneemann
 BASIS = [".wwwwwww.", "wwwwwwwws", "wwwwwwwws", "wwwwwwwss", ".wwwwsss."]

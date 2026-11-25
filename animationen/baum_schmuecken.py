@@ -7,18 +7,19 @@ import math
 
 from basis import (B, GELB, GOLD, HELLBLAU, PINK, ROT, WEISS, Bild, dimmen, mischen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "baum_schmuecken"
 TITEL = "Tannenbaum wird geschmückt"
 
 WAND = (26, 8, 12)
-BODEN = (95, 48, 15)
+BODEN = (33, 17, 5)
 TANNE = (0, 105, 28)
 TANNE_HELL = (0, 150, 40)
 TANNE_DUNKEL = (0, 62, 18)
-STAMM = (120, 60, 15)
+STAMM = (41, 21, 5)
 LICHT = (255, 200, 80)
 SILBER = (190, 210, 255)
-RAHMEN = (125, 68, 22)
+RAHMEN = (41, 22, 7)
 NACHT = (0, 0, 48)
 CX = 32
 # halbe Breite je Zeile (y = 2…13): drei Etagen

@@ -16,6 +16,7 @@ mit gleichen Mittelspalten und einfarbig in sechs Grautönen (je Kringel 25 bis 
 """
 from basis import B, HAUT, NACHTBLAU, Bild
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "raeuchermann"
 TITEL = "Räuchermännchen pafft Rauchkringel"
 
@@ -23,16 +24,16 @@ HUT = (0, 150, 50)
 BAND = (255, 190, 30)
 AUGE = (50, 25, 10)
 NASE = (255, 90, 70)
-LID = (215, 130, 80)                           # zugekniffenes Auge
+LID = (181, 143, 121)                           # zugekniffenes Auge
 BART = (235, 235, 245)
 JACKE = (225, 15, 10)
 ARM = (150, 0, 10)
 HOSE = (30, 70, 200)
-SOCKEL = (190, 105, 30)
-PFEIFE = (150, 80, 25)
+SOCKEL = (66, 36, 10)
+PFEIFE = (49, 26, 8)
 ASCHE = (70, 15, 0)                            # Räucherkerze im Bauch, wenn sie nicht glimmt
 GLUT = [(140, 35, 0), (255, 90, 0), (255, 160, 20)]
-BANK = (70, 38, 12)                            # Fensterbank (große Fläche, gedämpft)
+BANK = (33, 18, 6)                            # Fensterbank (große Fläche, gedämpft)
 ZWEIG = (0, 110, 40)
 BEERE = (255, 30, 20)
 KERZE = (215, 30, 20)

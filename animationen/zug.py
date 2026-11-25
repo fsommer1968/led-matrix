@@ -20,6 +20,7 @@ import math
 from basis import (B, BUNT, GELB, GOLD, NACHTBLAU, PINK, ROT, BLAU, TUERKIS, WEISS, Bild, Schnee,
                    dimmen)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "zug"
 TITEL = "Weihnachtszug mit Tannenbaum, Geschenken und Schneemann"
 
@@ -29,12 +30,12 @@ RAD_HELL = (255, 255, 255)
 HUEGEL = (20, 26, 62)
 HUEGEL_KANTE = (55, 65, 105)
 TANNE_FERN = (0, 62, 20)
-HAUS = (85, 50, 30)
+HAUS = (33, 19, 12)
 KESSEL = (0, 165, 55)
 SCHLOT = (130, 130, 150)
 LAMPE = (255, 245, 170)
 SCHNEEWEISS = (235, 240, 255)
-ZWEIG = (190, 110, 40)
+ZWEIG = (66, 38, 14)
 STERNE = ((8, 1, 0, 32), (50, 2, 13, 40))                       # x, y, Phase, Periode
 SCHNEE = Schnee(anzahl=2, saat=18, farbe=(120, 130, 175))
 

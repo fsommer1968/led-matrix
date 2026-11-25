@@ -7,16 +7,17 @@ import math
 
 from basis import B, GELB, GOLD, NACHTBLAU, ROT, SCHNEEDECKE, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "nikolaus"
 TITEL = "Nikolaus winkt und füllt die Stiefel"
 
-HAUT = (255, 180, 130)
+HAUT = (214, 171, 143)
 BART = (240, 240, 250)
 DUNKEL = (60, 35, 25)
-STAB = (170, 110, 40)
+STAB = (58, 37, 14)
 MANTEL = (200, 0, 20)
-SACK = (160, 100, 40)
-SACK_DUNKEL = (105, 60, 20)
+SACK = (49, 31, 12)
+SACK_DUNKEL = (33, 19, 6)
 # Die Matrix speichert nur 80 KB je Animation, jedes Bild einzeln komprimiert: Jeder einzelne
 # Punkt am Himmel kostet in jedem Bild rund 5 Bytes. Darum blinken die Sterne reihum auf (jeder
 # ist nur einen Teil der Zeit an), und es fallen wenige Flocken (23.11.2026).

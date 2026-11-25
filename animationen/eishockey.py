@@ -21,6 +21,7 @@ Haus 7 KB, ein Stern gut 1 KB.
 """
 from basis import GELB, HAUT, PINK, ROT, WEISS, Bild, dimmen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "eishockey"
 TITEL = "Eishockey auf dem Dorfteich"
 
@@ -31,14 +32,14 @@ EIS_HINTEN = (60, 86, 132)                     # Zeile 8–9
 EIS = (74, 104, 154)                           # Zeile 10–14, hell genug für den schwarzen Puck
 PUCK = (0, 0, 0)
 TANNE = (0, 110, 40)
-STAMM = (100, 55, 20)
+STAMM = (33, 18, 7)
 STIEFEL = (215, 105, 15)
 DACH = (150, 162, 205)                         # verschneites Dach des Hauses am Ufer
-WAND = (95, 52, 28)
+WAND = (33, 18, 10)
 FENSTER = (255, 175, 40)
 ZUG = (150, 185, 225)                          # heller Strich hinter dem schnellen Puck
-HOLZ = (235, 175, 70)                          # Schläger
-HOSE = (120, 75, 40)
+HOLZ = (74, 55, 22)                          # Schläger
+HOSE = (41, 26, 14)
 AUGE = (50, 25, 10)
 SPLITTER = (205, 230, 255)
 STERN = (255, 240, 200)

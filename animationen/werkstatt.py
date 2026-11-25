@@ -14,12 +14,13 @@ Fahrt und nur eine je Platz, keine Rollen unter dem Band.
 """
 from basis import (B, BLAU, GELB, HAUT, HELLBLAU, LILA, ORANGE, PINK, ROT, TUERKIS, WEISS, Bild)
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "werkstatt"
 TITEL = "Wichtelwerkstatt mit Fließband"
 
 WAND = (30, 12, 5)
-BALKEN = (70, 34, 10)
-HOLZ = (120, 65, 22)
+BALKEN = (33, 16, 5)
+HOLZ = (41, 22, 8)
 TAKT, FAHRT = 51, 17
 NAHT, NAHT_BEI = 17, 2                      # Bandmarke je Platz, mittig zwischen zwei Gegenständen
 PLATZ_A, ABSTAND = 11, 17                   # Mitte des ersten Platzes; B = 28, C = 45, hinaus 62

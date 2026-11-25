@@ -21,6 +21,7 @@ import math
 
 from basis import B, GELB, GOLD, HAUT, ORANGE, PINK, ROT, Bild
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "schneemann_bauen"
 TITEL = "Kinder bauen einen Schneemann"
 
@@ -34,11 +35,11 @@ SONNE = (255, 200, 0)
 SONNE_HELL = (255, 235, 90)                    # wenn sie strahlt
 STRAHL = (255, 170, 0)
 TANNE = (0, 95, 35)
-ZAUN = (110, 60, 20)
+ZAUN = (33, 18, 6)
 HUT = (130, 40, 255)
-HOLZ = (170, 90, 30)
+HOLZ = (58, 30, 10)
 STROH = (255, 190, 40)
-HOSE = (120, 80, 45)
+HOSE = (41, 27, 15)
 AUGE = (50, 25, 10)
 
 HORIZONT = 10                                  # Zeile der Schneekante; darunter Wiese

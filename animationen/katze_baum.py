@@ -16,13 +16,14 @@ import math
 
 from basis import B, GELB, GOLD, ORANGE, PINK, ROT, TUERKIS, WEISS, Bild, dimmen, mischen
 
+# Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "katze_baum"
 TITEL = "Katze spielt mit dem Christbaum"
 
 WAND = (10, 6, 26)                             # Blau +1 (gleiche Nachbarbilder im GIF) zeigt die Matrix genauso
-BODEN = (95, 48, 15)
+BODEN = (33, 17, 5)
 TANNE = (0, 105, 28)
-STAMM = (120, 60, 15)
+STAMM = (41, 21, 5)
 LICHT = (255, 200, 80)
 BLAU = (0, 90, 255)
 BAND = (200, 210, 240)                         # Band und Schleife: nicht ganz weiß, sonst das Hellste im Bild
