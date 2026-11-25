@@ -220,7 +220,7 @@ Alle 64×16, je 255 Bilder, komprimiert höchstens 76 KB; 8-fach vergrößerte V
 | `zug` | Winter | Weihnachtszug mit Dampflok, Baum, Geschenken und Schneemann, „TUUT“ | 73.7 |
 | `glocken` | Winter | schwingende Glocken, Noten, „KLING GLOECKCHEN …“ | 70.8 |
 | `pinguine` | Winter | Pinguine mit Mützen, Bauchrutscher, Schneeball | 73.5 |
-| `rentier` | Winter | Rudolph mit leuchtender Nase, „RUDOLPH“ | 73.7 |
+| `rentier` | Winter | Rentier mit leuchtender Nase | 73.7 |
 | `schneeflocken` | Winter | wachsende, drehende Eiskristalle | 73.6 |
 | `eislaufen` | Winter | Eisläufer auf dem See, Laternen, Lichterkette | 73.5 |
 | `weihnachtsmarkt` | Winter | Buden, Karussell, Glühweinkessel, Leute | 73.1 |
@@ -449,4 +449,5 @@ python3 -m unittest pi/test_matrix.py
 ## Lizenz
 
 MIT, siehe [`LICENSE`](LICENSE). `pi/a2pl.py` stammt aus
-[lambdafu/surplife](https://github.com/lambdafu/surplife) (ebenfalls MIT, Hinweis in der Datei).
+[lambdafu/surplife](https://github.com/lambdafu/surplife) (ebenfalls MIT, vollständiger Lizenztext in [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)).
+Alle Animationen sind in diesem Projekt als Code gezeichnet, ohne fremde Bilder oder Schriftdateien.

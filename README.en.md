@@ -219,7 +219,7 @@ All 64×16, 255 frames each, at most 76 KB compressed; 8× enlarged previews in 
 | `zug` | Winter | Christmas train with steam engine, tree, presents and snowman | 73.7 |
 | `glocken` | Winter | swinging bells, notes, scrolling song title | 70.8 |
 | `pinguine` | Winter | penguins with hats, belly slide, snowball | 73.5 |
-| `rentier` | Winter | Rudolph with glowing nose | 73.7 |
+| `rentier` | Winter | reindeer with glowing nose | 73.7 |
 | `schneeflocken` | Winter | growing, rotating ice crystals | 73.6 |
 | `eislaufen` | Winter | ice skaters, lanterns, fairy lights | 73.5 |
 | `weihnachtsmarkt` | Winter | market stalls, carousel, mulled wine, people | 73.1 |
@@ -446,4 +446,5 @@ python3 -m unittest pi/test_matrix.py
 ## License
 
 MIT, see [`LICENSE`](LICENSE). `pi/a2pl.py` is taken from
-[lambdafu/surplife](https://github.com/lambdafu/surplife) (also MIT, notice in the file).
+[lambdafu/surplife](https://github.com/lambdafu/surplife) (also MIT, full license text in [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)).
+All animations are drawn in code in this project, without third-party images or font files.

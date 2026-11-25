@@ -3,7 +3,7 @@
 Sternenhimmel mit Mond, Dorf mit erleuchteten Fenstern und Rauch aus den Kaminen.
 Der Schlitten fliegt zweimal durch (hin und zurück) und wirft Geschenke in die Kamine: sie
 fallen senkrecht hinein, es funkt, und die Fenster des Hauses leuchten bunt.
-Rudolphs Nase blinkt, hinter dem Schlitten Sternenstaub, dazwischen Sternschnuppen.
+Die Nase des vordersten Rentiers blinkt, hinter dem Schlitten Sternenstaub, dazwischen Sternschnuppen.
 """
 import math
 

@@ -1,7 +1,9 @@
-"""Rentier Rudolph: großes Rentier galoppiert von links herein und bleibt stehen, die rote Nase
-beginnt zu leuchten und zu strahlen, die Lichter im Geweih gehen an, "RUDOLPH" erscheint
-Buchstabe für Buchstabe in doppelt hoher Schrift vor den Tannen; am Ende galoppiert es mit
-Glitzerspur nach rechts davon und nimmt die Buchstaben mit – 255 Bilder.
+"""Rentier mit roter Nase: großes Rentier galoppiert von links herein und bleibt stehen, die rote
+Nase beginnt zu leuchten und zu strahlen, die Lichter im Geweih gehen an; am Ende galoppiert es
+mit Glitzerspur nach rechts davon – 255 Bilder.
+
+Ohne Namensschriftzug (25.11.2026): Die bekannte rotnasige Rentierfigur ist markenrechtlich geschützt;
+für die Veröffentlichung bleibt das Rentier namenlos. TEXT leer lassen.
 
 Sparsam gezeichnet, weil die Matrix je Animation nur 80 KB speichert (Ziel ≤ 76000 Bytes,
 siehe groesse.py): einfarbige Tannen, wenige Sterne, die zwischendurch ganz ausgehen, die
@@ -10,7 +12,7 @@ je Spalte doppelt), äußerer Nasenschein nur beim hellsten Puls, dünnere Glitz
 
 0–23    galoppiert herein
 23–50   steht, Nase glimmt auf, Geweih-Lichter gehen an
-50–92   RUDOLPH erscheint
+50–92   (früher Schriftzug, jetzt ohne)
 92–210  Nase strahlt, Schweif wedelt, ein Freudensprung
 210–255 galoppiert davon
 """
@@ -22,7 +24,7 @@ from basis import (B, BUNT, GOLD, NACHTBLAU, ROT, SCHNEEDECKE, WEISS, Bild, Schn
 
 # Holz-, Fell- und Hauttöne am 25.11.2026 auf die an der Matrix gewählten Töne umgerechnet (vorher leuchteten sie orange)
 NAME = "rentier"
-TITEL = "Rentier Rudolph mit leuchtender Nase"
+TITEL = "Rentier mit leuchtender Nase"
 
 FELL = (58, 30, 10)
 FELL_DUNKEL = (33, 16, 5)
@@ -64,7 +66,7 @@ NASE_DX, NASE_DY = 19, 5                                         # Nase 2×2 in 
 STERNE = [(2, 1, 0, 32), (7, 4, 17, 40), (30, 2, 9, 24), (42, 5, 30, 32), (54, 1, 5, 40),
           (61, 6, 22, 24)]
 SCHNEE = Schnee(anzahl=3, saat=89, farbe=(120, 130, 175))
-TEXT = "RUDOLPH"
+TEXT = ""                                                        # kein Name (Markenrecht)
 TEXT_X = 23
 TANNEN = [(30, 5), (44, 5), (58, 5)]                               # Mitte, Höhe (alle gleich)
 
@@ -179,7 +181,7 @@ def bilder():
             nase, strahlen = 1.0, False
         lichter = 0 if f < 30 else min(4, (f - 30) // 5 + 1)
         nasenschein(bild, x + NASE_DX, NASE_DY - hoch, nase if f >= 23 else 0.5, strahlen, f)
-        # RUDOLPH: erscheint ab 50; beim Davongaloppieren nimmt die Nase die Buchstaben mit
+        # Schriftzug (leer): erschiene ab 50; beim Davongaloppieren nimmt die Nase die Buchstaben mit
         if f >= 50:
             n = min(len(TEXT), (f - 50) // 6 + 1)
             for i in range(n):
