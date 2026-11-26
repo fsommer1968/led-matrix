@@ -209,6 +209,15 @@ class Startzeile(unittest.TestCase):
         self.assertEqual(mw.wechsel_text(halb), "48-mal am Tag (00:00 … 23:30)")
 
 
+class HelligkeitOhneUpload(unittest.TestCase):
+    def test_nur_helligkeit_anders(self):
+        a = "IOTBT1A2 74a73961c355c7be tempo=75 hell=67"
+        self.assertTrue(mw.nur_helligkeit_anders(a, a.replace("hell=67", "hell=100")))
+        self.assertFalse(mw.nur_helligkeit_anders(a, a))
+        self.assertFalse(mw.nur_helligkeit_anders(a, a.replace("74a7", "0000").replace("hell=67", "hell=100")))
+        self.assertFalse(mw.nur_helligkeit_anders("", a))
+
+
 class Journal(unittest.TestCase):
     def test_stufe_als_vorsatz(self):
         import logging

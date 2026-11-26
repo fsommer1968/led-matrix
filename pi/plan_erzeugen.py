@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Erzeugt die Wechsellisten (MATRIX_GIFS…) für den Matrix-Wächter: Wechsel alle 30 Minuten.
+"""Erzeugt die Wechsellisten (MATRIX_GIFS…) für den Matrix-Wächter: Wechsel alle 15 Minuten
+(vorher 30).
 Alle Daten (Adventssonntage, Nikolaus, Weihnachten, Silvester, Ende) entstehen aus dem Jahr:
 ab Juli gilt die kommende Saison (MATRIX_JAHR=2027 erzwingt Neujahr 2027). Danach die
 Silvester-Animationen neu erzeugen (Jahreszahl), sie heißen dann neujahr_<Jahr>.
-Ursprünglich
-, jede Phase als exakte Liste von Halbstunden-Plätzen ab ihrem Beginn.
+Ursprünglich (23.11.2026) jede Phase als exakte Liste von Plätzen (je SCHRITT) ab ihrem Beginn.
 
 Regeln:
   - Animationen nur auf Plätze, in denen die Matrix an ist (Zeitplan + Sonnenuntergang);
@@ -30,8 +30,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import matrix_zeitplan as zp  # noqa: E402
 
 Z = zp.ZONE
-SCHRITT = datetime.timedelta(minutes=30)
-WECHSEL = " ".join(f"{h:02d}:{m:02d}" for h in range(24) for m in (0, 30))
+SCHRITT = datetime.timedelta(minutes=15)                         # 25.11.2026 (vorher 30)
+WECHSEL = " ".join(f"{h:02d}:{m:02d}" for h in range(24) for m in range(0, 60, 15))
 
 ALLGEMEIN = ["kamin", "schlittenflug", "polarlicht", "lebkuchen", "zug", "glocken", "pinguine",
              "weihnachtsmarkt", "rentier", "schneeballschlacht", "auspacken", "lichterhaus",
@@ -46,19 +46,57 @@ WEIHNACHTEN = ["weihnacht_bunt", "krippe", "hohoho", "stille_nacht", "schneemann
                "hirten", "baum_schmuecken", "geschenkeberg", "rentier"]
 SILVESTER = ["feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel"]
 # Erzgebirge, Schwarzwald und Katze: im allgemeinen Wechsel und an Weihnachten
-HEIMAT = ["kuckucksuhr", "schwibbogen", "nussknacker", "schwarzwald", "katze_baum", "pyramide", "raeuchermann"]
+HEIMAT = ["kuckucksuhr", "schwibbogen", "nussknacker", "schwarzwald", "katze_baum", "pyramide", "raeuchermann", "glasblaeser", "schneesturm"]
 ALLGEMEIN += HEIMAT
 WEIHNACHTEN += HEIMAT
 # Weitere: Silvester ab 27.12., Winter allgemein, Weihnachten auch am 25./26.
-SILVESTER_NEU = ["gluecksschwein", "rakete", "kirchturm", "wunderkerzen", "wachsgiessen", "spaziergang", "raclette"]
+SILVESTER_NEU = ["gluecksschwein", "rakete", "kirchturm", "wunderkerzen", "wachsgiessen", "spaziergang", "raclette", "feuerzangenbowle", "neujahrsbrezel", "schornsteinfeger", "tischfeuerwerk", "silvesterparty"]
 SILVESTER += SILVESTER_NEU
-WINTER_NEU = ["kirschtorte", "hermelin", "muehle", "holzfaeller", "pistenraupe", "wasserfall", "eishockey"]
+WINTER_NEU = ["kirschtorte", "hermelin", "muehle", "holzfaeller", "pistenraupe", "wasserfall", "eishockey", "eichhoernchen", "rentier_flugschule", "maronen", "rotkehlchen", "igel", "eisstock", "schneehase", "schneeschuh", "sternschnuppen"]
 ALLGEMEIN += WINTER_NEU
-FEST_NEU = ["weihnachtsmann_kamin", "kerze"]
+FEST_NEU = ["weihnachtsmann_kamin", "kerze", "christkind", "barbarazweig", "wichtel_teig", "christbaumkauf", "postbote", "gluehwein", "strohsterne", "windlichter"]
 ALLGEMEIN += FEST_NEU
 WEIHNACHTEN += FEST_NEU
-WEIHNACHT_NEU = ["bescherung", "festessen", "christmette"]                                           # nur am 25./26.12.
+WEIHNACHT_NEU = ["bescherung", "festessen", "christmette", "orgel", "krippenspiel"]                                           # nur am 25./26.12.
 WEIHNACHTEN += WEIHNACHT_NEU
+
+
+# Geschichten: Statt reihum laufen die Animationen als kleine Geschichten
+# nacheinander. Jede Phase nimmt aus dieser Reihenfolge, was in ihrem Vorrat ist; noch nicht
+# eingespielte Namen (Ideenliste) werden übersprungen und erscheinen von selbst, sobald es sie gibt.
+# Was in keiner Geschichte steht, läuft am Ende jeder Runde.
+GESCHICHTEN = [
+    ("Im verschneiten Dorf", ["stadt_schnee", "schneepflug", "postbote", "lichterhaus", "windlichter",
+                              "schneekugel", "zug"]),
+    ("Weihnachtsmarkt", ["christbaumkauf", "weihnachtsmarkt", "gluehwein", "maronen", "lebkuchen", "glocken"]),
+    ("Weihnachtsbäckerei", ["plaetzchen", "wichtel_teig", "bratapfel", "kirschtorte", "strohsterne"]),
+    ("Beim Weihnachtsmann", ["wunschzettel", "werkstatt", "geschenkeberg", "rentier_flugschule", "rentier",
+                             "weihnachtsmann_rentier", "schlittenflug", "weihnachtsmann_kamin"]),
+    ("Kinder im Schnee", ["schneemann_bauen", "schneeballschlacht", "rodeln", "iglu", "eislaufen", "eishockey",
+                          "eisstock", "skifahrer", "pistenraupe", "schneeschuh"]),
+    ("Tiere im Winterwald", ["futterhaus", "rotkehlchen", "eichhoernchen", "hermelin", "winterwald",
+                             "schneehase", "igel", "eule", "sternschnuppen", "schneeflocken"]),
+    ("Schwarzwald", ["holzfaeller", "muehle", "wasserfall", "glasblaeser", "kuckucksuhr", "schneesturm",
+                     "schwarzwald"]),
+    ("Weihnachtsstube", ["barbarazweig", "kerze", "schwibbogen", "pyramide", "nussknacker", "raeuchermann",
+                         "katze_baum", "kamin"]),
+    ("Hoher Norden", ["hundeschlitten", "eisbaer", "pinguine", "polarlicht"]),
+    ("Heilige Nacht", ["hirten", "krippe", "krippenspiel", "christmette", "orgel", "stille_nacht"]),
+    ("Heiligabend zu Hause", ["baum_schmuecken", "christkind", "bescherung", "auspacken", "festessen"]),
+    ("Weihnachtsgrüße", ["weihnacht_bunt", "hohoho", "schneemann"]),
+    ("Zwischen den Jahren", ["spaziergang", "raclette", "feuerzangenbowle", "neujahrsbrezel", "wachsgiessen"]),
+    ("Silvesternacht", ["gluecksschwein", "schornsteinfeger", "gluecksbringer", "tischfeuerwerk",
+                        "silvesterparty", "sekt", "kirchturm", "rakete", "wunderkerzen", "feuerwerk",
+                        "jahreswechsel", "countdown"]),
+]
+
+
+def ordnen(pool):
+    """Vorrat einer Phase in Geschichten-Reihenfolge (jeder Name einmal), Rest am Ende."""
+    pool = list(dict.fromkeys(pool))
+    geordnet = [n for _, namen in GESCHICHTEN for n in namen if n in pool]
+    geordnet = list(dict.fromkeys(geordnet))
+    return geordnet + [n for n in pool if n not in geordnet]
 
 
 def neues_jahr(heute=None):
@@ -97,9 +135,9 @@ EXTRA = [f"{JAHR}-12-31T21:30/{NEU}-01-01T01:00"]
 
 
 def sichtbar(t):
-    """Ist die Matrix in der Halbstunde ab t irgendwann an?"""
+    """Ist die Matrix im Platz (SCHRITT) ab t irgendwann an?"""
     return any(zp.soll_an(t + datetime.timedelta(minutes=m), extra=EXTRA, ende=ENDE_TEXT)
-               for m in range(0, 30, 5))
+               for m in range(0, SCHRITT.seconds // 60, 5))
 
 
 def fest(t, woche):
@@ -107,7 +145,7 @@ def fest(t, woche):
     if t.date() == SILVESTER_TAG:                               # zu Mitternacht hin
         if (t.hour, t.minute) == (23, 0):
             return "feuerwerk"
-        if (t.hour, t.minute) == (23, 30):
+        if (t.hour, t.minute) in ((23, 30), (23, 45)):          # die letzte halbe Stunde
             return "countdown"
     hm, tag = (t.hour, t.minute), (t.date() - ADVENTE[woche].date()).days if woche is not None else None
     if woche is None or woche < 0:
@@ -128,7 +166,7 @@ def fest(t, woche):
 
 
 def phase_liste(von, bis, pool, woche=None, zaehler=None):
-    """Liste der GIF-Namen je Halbstunde von `von` bis `bis`."""
+    """Liste der GIF-Namen je Platz (SCHRITT) von `von` bis `bis`."""
     plaetze = []
     t = von
     while t < bis:
@@ -156,18 +194,18 @@ def phase_liste(von, bis, pool, woche=None, zaehler=None):
 
 def plan():
     zaehler = [0]
-    phasen = [(START, phase_liste(START, ADVENTE[0], ALLGEMEIN, None, zaehler))]
+    phasen = [(START, phase_liste(START, ADVENTE[0], ordnen(ALLGEMEIN), None, zaehler))]
     for w, ab in enumerate(ADVENTE):
         bis = ADVENTE[w + 1] if w + 1 < len(ADVENTE) else WEIHNACHT_AB
-        phasen.append((ab, phase_liste(ab, bis, ALLGEMEIN + ADVENT_EXTRA, w, zaehler)))
-    phasen.append((WEIHNACHT_AB, phase_liste(WEIHNACHT_AB, SILVESTER_AB, WEIHNACHTEN, None, [0])))
-    phasen.append((SILVESTER_AB, phase_liste(SILVESTER_AB, ENDE, SILVESTER, -1, [0])))
+        phasen.append((ab, phase_liste(ab, bis, ordnen(ALLGEMEIN + ADVENT_EXTRA), w, zaehler)))
+    phasen.append((WEIHNACHT_AB, phase_liste(WEIHNACHT_AB, SILVESTER_AB, ordnen(WEIHNACHTEN), None, [0])))
+    phasen.append((SILVESTER_AB, phase_liste(SILVESTER_AB, ENDE, ordnen(SILVESTER), -1, [0])))
     return phasen
 
 
 def block(phasen):
-    zeilen = ["# Wechsellisten, erzeugt mit pi/plan_erzeugen.py (nicht von Hand ändern): alle 30 Minuten",
-              "# ein Platz je Halbstunde ab Phasenbeginn; Namen ohne _64x16.gif. Phasen: 1 vor Advent,",
+    zeilen = ["# Wechsellisten, erzeugt mit pi/plan_erzeugen.py (nicht von Hand ändern): alle 15 Minuten",
+              "# ein Platz je Viertelstunde ab Phasenbeginn; Namen ohne _64x16.gif. Phasen: 1 vor Advent,",
               "# 2–5 Adventswochen, 6 Weihnachten, 7 Silvester, 8 Neujahrsgruß.",
               f'MATRIX_GIF_WECHSEL="{WECHSEL}"']
     for i, (ab, liste) in enumerate(phasen, 1):

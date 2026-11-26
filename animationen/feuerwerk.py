@@ -35,7 +35,7 @@ def _funke(bild, x, y, farbe, h):
 
 
 def _matrixfarbe(r, g, b):
-    """16-Bit-Farbe der Matrix, 7/4/5 Bit H/S/V (wie led/pi/matrix_spieler.hsv16)."""
+    """16-Bit-Farbe der Matrix, 7/4/5 Bit H/S/V (wie pi/matrix_spieler.hsv16)."""
     h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
     return (round(h * 127) & 0x7F) << 9 | round(s * 15) << 5 | round(v * 31)
 

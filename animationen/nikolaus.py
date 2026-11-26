@@ -107,7 +107,7 @@ def gabe(bild, x, y, farbe):
 
 
 def _matrixfarbe(c):
-    """Farbe, wie die Matrix sie zeigt (7/4/5 Bit H/S/V, wie hsv16 in led/pi/matrix_spieler.py)."""
+    """Farbe, wie die Matrix sie zeigt (7/4/5 Bit H/S/V, wie hsv16 in pi/matrix_spieler.py)."""
     h, s, v = colorsys.rgb_to_hsv(c[0] / 255, c[1] / 255, c[2] / 255)
     return round(h * 127) & 0x7F, round(s * 15), round(v * 31)
 

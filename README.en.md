@@ -4,7 +4,7 @@
 
 An alternative to the **Surplife app**: a Raspberry Pi uploads your own animations via Bluetooth
 to a Surplife LED matrix (64×16 pixels, device name `IOTBT…`), rotates them on a schedule,
-switches the display on and off by time of day and adapts the brightness to daylight. Around 75
+switches the display on and off by time of day and adapts the brightness to daylight. Around 100
 hand-drawn (procedurally generated) Christmas, winter and New Year animations are included.
 
 **Related projects** this builds on:
@@ -49,8 +49,9 @@ Code comments and most identifiers are in German.
 - **Watchdog service** (`matrix-waechter`) – looks for the matrix every 30 s and uploads only when
   something changed (animation, speed, brightness); retries with growing pauses on errors.
 - **Scheduled rotation** – animations in phases (before Advent, Advent weeks, Christmas, New
-  Year's Eve), a change every 30 minutes; a planner places animations only at times the matrix is
-  on. A phase can start to the second (New Year greeting just before midnight).
+  Year's Eve), a change every 15 minutes; a planner places animations only at times the matrix is
+  on. Animations run as little stories one after another (e.g. "Christmas market", "Animals in the
+  winter forest", "New Year's Eve"; `GESCHICHTEN` in `pi/plan_erzeugen.py`). A phase can start to the second (New Year greeting just before midnight).
 - **On/off schedule** – mornings and from half an hour before sunset (computed for your
   location), extra windows (New Year's Eve until 1 am) and an end of season. Switched via an
   **optional smart plug** or, without a plug, **via Bluetooth** (display on/off).
@@ -289,6 +290,32 @@ All 64×16, 255 frames each, at most 76 KB compressed; 8× enlarged previews in 
 | `gluecksbringer` | New Year's Eve | lucky charms | 71.9 |
 | `jahreswechsel` | New Year's Eve | old year rolls over to the new one | 68.2 |
 | `neujahr_2027` | New Year's Eve | New Year greeting with fireworks (at midnight) | 68.2 |
+| `christkind` | Advent | the Christkind rings its bell over the village | 72.0 |
+| `feuerzangenbowle` | Silvester | flaming punch | 52.4 |
+| `glasblaeser` | Winter | Black Forest glassblower | 69.5 |
+| `neujahrsbrezel` | Silvester | New Year's pretzel | 56.3 |
+| `barbarazweig` | Advent | cherry branch blossoms | 72.7 |
+| `orgel` | Weihnachten | church organ | 71.4 |
+| `krippenspiel` | Weihnachten | children's nativity play | 73.1 |
+| `schornsteinfeger` | Silvester | chimney sweep brings luck | 67.5 |
+| `eichhoernchen` | Winter | squirrel looks for its nuts | 49.7 |
+| `rentier_flugschule` | Winter | reindeer flight school | 70.5 |
+| `wichtel_teig` | Advent | elf falls into the cookie dough | 70.5 |
+| `schneesturm` | Winter | Black Forest house in a snowstorm | 72.9 |
+| `christbaumkauf` | Advent | buying the Christmas tree | 72.9 |
+| `gluehwein` | Advent | mulled wine stall | 72.8 |
+| `maronen` | Winter | roasted chestnuts | 73.1 |
+| `postbote` | Advent | the postman brings Christmas mail | 72.4 |
+| `strohsterne` | Advent | making straw stars | 51.7 |
+| `igel` | Winter | hedgehog hibernating | 73.1 |
+| `rotkehlchen` | Winter | robin in the snow | 63.3 |
+| `schneehase` | Winter | snow hares in the moonlight | 72.0 |
+| `eisstock` | Winter | ice stock sport | 67.9 |
+| `schneeschuh` | Winter | snowshoe hike to the summit | 68.0 |
+| `tischfeuerwerk` | Silvester | table fireworks | 72.8 |
+| `silvesterparty` | Silvester | New Year's Eve party | 73.4 |
+| `windlichter` | Advent | path of lanterns | 73.8 |
+| `sternschnuppen` | Winter | shooting stars over the winter forest | 69.4 |
 
 
 | | | |

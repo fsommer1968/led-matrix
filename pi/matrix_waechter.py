@@ -71,6 +71,17 @@ def soll_stand(gif_bytes, name, tempo, hell):
     return f"{name} {hashlib.sha256(gif_bytes).hexdigest()[:16]} tempo={tempo} hell={hell}"
 
 
+# Helligkeit allein per Befehl e2 09 setzen statt neu hochzuladen (25.11.2026: spart zwei
+# Uploads am Tag). Erst nach dem Versuch an der Matrix einschalten (MATRIX_HELL_OHNE_UPLOAD=1).
+HELL_OHNE_UPLOAD = os.environ.get("MATRIX_HELL_OHNE_UPLOAD", "0") == "1"
+
+
+def nur_helligkeit_anders(stand, soll):
+    """True, wenn sich Stand und Soll nur in hell=… unterscheiden (gleiches GIF, gleiches Tempo)."""
+    a, b = re.match(r"^(.*) hell=(\d+)$", stand or ""), re.match(r"^(.*) hell=(\d+)$", soll or "")
+    return bool(a and b) and a.group(1) == b.group(1) and a.group(2) != b.group(2)
+
+
 def stand_lesen(pfad=STAND):
     try:
         with open(pfad) as f:
@@ -299,6 +310,25 @@ async def _verbinden_hochladen(m, bilder, hell, komprimiert):
         await anzeige_setzen(m, "aus")
 
 
+async def helligkeit_schicken(name, hell):
+    """Nur Tempo und Helligkeit setzen (kein Upload). True = geklappt."""
+    m = Matrix(name)
+    try:
+        await asyncio.wait_for(m.verbinden(), 90)
+        await m.senden(bytes([0xE2, 0x09, 0x01, TEMPO, hell, 0x00]))
+        if anzeige_soll() == "aus":                 # Verbinden hat die Anzeige eingeschaltet
+            await anzeige_setzen(m, "aus")
+        return True
+    except Exception as e:
+        log.warning("Helligkeit auf %s fehlgeschlagen: %s", name, text(e))
+        return False
+    finally:
+        try:
+            await m.trennen()
+        except Exception:
+            pass
+
+
 async def einmal_hochladen(name, bilder, hell=HELL, komprimiert=None):
     """Verbinden, hochladen, trennen. True = geklappt."""
     m = Matrix(name)
@@ -373,6 +403,13 @@ async def main():
                 if gemeldet != soll:
                     log.info("%s hat das GIF schon (%s), nichts zu tun", name, soll)
                     gemeldet = soll
+            elif HELL_OHNE_UPLOAD and nur_helligkeit_anders(stand_lesen(), soll):
+                if await helligkeit_schicken(name, hell):
+                    stand_schreiben(soll)
+                    log.info("%s: Helligkeit %d gesetzt, ohne Upload", name, hell)
+                    fehlversuche, gemeldet = 0, soll
+                else:
+                    fehlversuche += 1
             else:
                 vorrat = vorrat_lesen(gif_bytes)
                 if vorrat and sum(map(len, vorrat)) > MAX_BYTES:          # zu groß: Matrix würde hängen

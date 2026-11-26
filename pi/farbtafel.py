@@ -119,7 +119,7 @@ if __name__ == "__main__":
     p.add_argument("was", choices=["vorschau", "zeigen"])
     p.add_argument("ziel", help="PNG-Datei (vorschau) oder Seite 1–4 (zeigen)")
     p.add_argument("--hell", type=int, default=100)
-    p.add_argument("-n", "--name", default=os.environ.get("MATRIX_NAME") or "IOTBT3C6")
+    p.add_argument("-n", "--name", default=os.environ.get("MATRIX_NAME") or "IOTBT1A2")
     a = p.parse_args()
     if a.was == "vorschau":
         vorschau(a.ziel)

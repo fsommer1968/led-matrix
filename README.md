@@ -5,7 +5,7 @@
 Eine Alternative zur **Surplife-App**: Ein Raspberry Pi lädt eigene Animationen per Bluetooth
 in eine Surplife-LED-Matrix (64×16 Pixel, Gerätename `IOTBT…`), wechselt sie nach Plan, schaltet
 die Anzeige nach Zeitplan ein und aus und passt die Helligkeit dem Tageslicht an. Dazu gehören
-rund 75 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
+rund 100 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
 
 **Verwandte Projekte**, ohne die das hier nicht entstanden wäre:
 
@@ -47,8 +47,9 @@ rund 75 selbst gezeichnete Weihnachts-, Winter- und Silvester-Animationen.
 - **Wächter-Dienst** (`matrix-waechter`) – sucht die Matrix alle 30 s, lädt nur hoch, wenn sich
   etwas geändert hat (Animation, Tempo, Helligkeit), wiederholt bei Fehlern mit wachsender Pause.
 - **Wechsel nach Plan** – Animationen in Phasen (vor dem Advent, Adventswochen, Weihnachten,
-  Silvester), Wechsel alle 30 Minuten; ein Planer verteilt sie nur auf Zeiten, in denen die Matrix
-  an ist. Ein Phasenbeginn kann sekundengenau sein (Neujahrsgruß kurz vor 0 Uhr).
+  Silvester), Wechsel alle 15 Minuten; ein Planer verteilt sie nur auf Zeiten, in denen die Matrix
+  an ist. Die Animationen laufen als kleine Geschichten nacheinander (z. B. „Weihnachtsmarkt“,
+  „Tiere im Winterwald“, „Silvesternacht“; `GESCHICHTEN` in `pi/plan_erzeugen.py`). Ein Phasenbeginn kann sekundengenau sein (Neujahrsgruß kurz vor 0 Uhr).
 - **Zeitplan** – morgens und ab einer halben Stunde vor Sonnenuntergang (für den eigenen Ort
   berechnet), Zusatzfenster (Silvester bis 1 Uhr) und ein Saisonende. Geschaltet wird über eine
   **Schaltsteckdose (optional)** oder, ohne Steckdose, **per Bluetooth** (Anzeige an/aus).
@@ -290,6 +291,32 @@ Alle 64×16, je 255 Bilder, komprimiert höchstens 76 KB; 8-fach vergrößerte V
 | `gluecksbringer` | Silvester | Kleeblatt, Hufeisen, Glücksschwein, Schornsteinfeger, „VIEL GLÜCK“ | 71.9 |
 | `jahreswechsel` | Silvester | alte Jahreszahl rollt auf die neue | 68.2 |
 | `neujahr_2027` | Silvester | „ALLES GUTE“ / „FÜR“ / Jahreszahl mit Feuerwerk (31.12. um 0 Uhr) | 68.2 |
+| `christkind` | Advent | Das Christkind kommt | 72.0 |
+| `feuerzangenbowle` | Silvester | Feuerzangenbowle | 52.4 |
+| `glasblaeser` | Winter | Schwarzwälder Glasbläser | 69.5 |
+| `neujahrsbrezel` | Silvester | Neujahrsbrezel | 56.3 |
+| `barbarazweig` | Advent | Barbarazweig blüht auf | 72.7 |
+| `orgel` | Weihnachten | Kirchenorgel an Weihnachten | 71.4 |
+| `krippenspiel` | Weihnachten | Krippenspiel der Kinder | 73.1 |
+| `schornsteinfeger` | Silvester | Schornsteinfeger bringt Glück | 67.5 |
+| `eichhoernchen` | Winter | Eichhörnchen sucht seine Nüsse | 49.7 |
+| `rentier_flugschule` | Winter | Rentier-Flugschule | 70.5 |
+| `wichtel_teig` | Advent | Wichtel im Plätzchenteig | 70.5 |
+| `schneesturm` | Winter | Schwarzwaldhaus im Schneesturm | 72.9 |
+| `christbaumkauf` | Advent | Christbaumkauf | 72.9 |
+| `gluehwein` | Advent | Glühweinstand | 72.8 |
+| `maronen` | Winter | Heiße Maronen | 73.1 |
+| `postbote` | Advent | Der Postbote bringt Weihnachtspost | 72.4 |
+| `strohsterne` | Advent | Strohsterne basteln | 51.7 |
+| `igel` | Winter | Igel im Winterschlaf | 73.1 |
+| `rotkehlchen` | Winter | Rotkehlchen im Schnee | 63.3 |
+| `schneehase` | Winter | Schneehasen im Mondschein | 72.0 |
+| `eisstock` | Winter | Eisstockschießen | 67.9 |
+| `schneeschuh` | Winter | Schneeschuhwanderung zum Gipfel | 68.0 |
+| `tischfeuerwerk` | Silvester | Tischfeuerwerk | 72.8 |
+| `silvesterparty` | Silvester | Silvesterparty hinter dem Fenster | 73.4 |
+| `windlichter` | Advent | Der Weg der Windlichter | 73.8 |
+| `sternschnuppen` | Winter | Sternschnuppen über dem Winterwald | 69.4 |
 
 
 | | | |

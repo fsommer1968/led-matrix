@@ -2,13 +2,13 @@
 """Erzeugt die Matrix-Animationen als GIF (64×16) und 8-fache Vorschau nach led/.
 
 Aufruf (vom Repo-Ordner):
-  .venv/bin/python led/animationen/erzeugen.py            alle
-  .venv/bin/python led/animationen/erzeugen.py kamin …    nur diese (Modulnamen)
-  .venv/bin/python led/animationen/erzeugen.py --bogen    zusätzlich Bildbogen (PNG) je Animation
+  .venv/bin/python animationen/erzeugen.py            alle
+  .venv/bin/python animationen/erzeugen.py kamin …    nur diese (Modulnamen)
+  .venv/bin/python animationen/erzeugen.py --bogen    zusätzlich Bildbogen (PNG) je Animation
   … erzeugen.py --ziel /opt/matrix/gifs --ohne-vorschau adventskalender   (auf dem Pi, täglich)
 
 Die Reihenfolge in ANIMATIONEN ist auch die Reihenfolge für den täglichen Wechsel
-(MATRIX_GIFS in led/pi/matrix-waechter.default).
+(MATRIX_GIFS in pi/matrix-waechter.default).
 """
 import importlib
 import os
@@ -55,6 +55,32 @@ ANIMATIONEN = ["bunt", "kamin", "schlitten", "schneemann", "polarlicht", "advent
                "festessen",
                "christmette",
                "raclette",
+               "christkind",
+               "feuerzangenbowle",
+               "glasblaeser",
+               "neujahrsbrezel",
+               "orgel",
+               "krippenspiel",
+               "barbarazweig",
+               "schornsteinfeger",
+               "eichhoernchen",
+               "rentier_flugschule",
+               "wichtel_teig",
+               "schneesturm",
+               "maronen",
+               "christbaumkauf",
+               "postbote",
+               "gluehwein",
+               "strohsterne",
+               "rotkehlchen",
+               "igel",
+               "eisstock",
+               "schneehase",
+               "tischfeuerwerk",
+               "schneeschuh",
+               "windlichter",
+               "silvesterparty",
+               "sternschnuppen",
                # HEIMAT
                # Silvester (ab 27.12.) und der Gruß um 23:59
                "feuerwerk", "countdown", "sekt", "gluecksbringer", "jahreswechsel", "neujahr_2027"]
